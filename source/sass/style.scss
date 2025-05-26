@@ -1,4 +1,10 @@
-// Vendor
-// ---------------------------------
-
 @import "vendor/normalize";
+@import "./common/root";
+@import "./common/global";
+@import "./common/fonts";
+
+@import "./blocks/body";
+@import "./blocks/header";
+@import "./blocks/hero";
+@import "./blocks/hero-card";
+@import "./blocks/nav";

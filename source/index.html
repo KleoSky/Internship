@@ -1,31 +1,156 @@
 <!DOCTYPE html>
 <html lang="ru" data-validate="html">
 
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Internship</title>
-    <link rel="stylesheet" href="sass/style.scss">
-  </head>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Internship - твоя возможность для старта карьеры зарубежом</title>
+  <link rel="stylesheet" href="sass/style.scss">
+  <link rel="icon" href="favicon.ico">
+  <link rel="icon" sizes="32x32" href="public/32.png" type="image/png">
+  <link rel="icon" href="public/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="public/apple.png">
+  <link rel="manifest" href="manifest.webmanifest">
+</head>
 
-  <body class="page-body">
+<body class="body">
+  <div class="body-wrapper">
+    <header class="body__header header" data-test="hero">
+      <div class="header__main">
+        <div class="header__logo-wrapper">
+          <img class="header__logo" src="/__spritemap#sprite-logo-view" width="30" height="30" alt="Логотип сайта Internship">
+        </div>
+        <nav class="header__nav nav">
+          <button class="nav__button nav__button--closed" type="button">Меню</button>
+          <ul class="nav__list nav__list--closed">
+            <li class="nav__item">
+              <a class="nav__link" href="#">О проекте</a>
+            </li>
+            <li class="nav__item">
+              <a class="nav__link nav__link--select" href="#">Программы</a>
+              <ul class="nav__sublist nav__sublist--closed">
+                <li class="nav__subitem">
+                  <a class="nav__sublink" href="#">Стажировки</a>
+                </li>
+                <li class="nav__subitem">
+                  <a class="nav__sublink" href="#">Волонтёрство</a>
+                </li>
+                <li class="nav__subitem">
+                  <a class="nav__sublink" href="#">Учёба</a>
+                </li>
+                <li class="nav__subitem">
+                  <a class="nav__sublink" href="#">Религия</a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav__item">
+              <a class="nav__link" href="#">Как поехать</a>
+            </li>
+            <li class="nav__item">
+              <a class="nav__link" href="#">Отзывы</a>
+            </li>
+            <li class="nav__item">
+              <a class="nav__link nav__link--select" href="#">Новости</a>
+            </li>
+            <li class="nav__item">
+              <a class="nav__link" href="#">Контакты</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <section class="header__hero hero swiper">
+        <h1 class="visually-hidden">Проект "Стажировка" - твоя возможность начать карьеру в успешной компании!</h1>
+        <ul class="hero__list swiper-wrapper">
+          <li class="hero__item hero__item--active hero-card swiper-slide">
+            <div class="hero-card__picture">
+              <picture>
+                <source media="(min-width: 1440px)" width="1440" height="800" type="image/webp"
+                  srcset="img/hero-img-desktop-1@1x.webp 1x, img/hero-img-desktop-1@2x.webp 2x">
+                <source media="(min-width: 768px)" width="768" height="1024" type="image/webp"
+                  srcset="img/hero-img-tablet-1@1x.webp 1x, img/hero-img-tablet-1@2x.webp 2x">
+                <source width="320" height="568" type="image/webp"
+                  srcset="img/hero-img-mobile-1@1x.webp 1x, img/hero-img-mobile-1@2x.webp 2x">
+                <source media="(min-width: 1440px)" width="1440" height="800" type="image/jpeg"
+                  srcset="img/hero-img-desktop-1@1x.jpg 1x, img/hero-img-desktop-1@2x.jpg 2x">
+                <source media="(min-width: 768px)" width="768" height="1024" type="image/jpeg"
+                  srcset="img/hero-img-tablet-1@1x.jpg 1x, img/hero-img-tablet-1@2x.jpg 2x">
+                <img src="img/hero-img-mobile-1@1x.jpg" srcset="img/hero-img-mobile-1@2x.jpg 2x" width="320"
+                  height="568" alt="Кудрявая студентка в очках">
+              </picture>
+            </div>
+            <div class="hero-card__content">
+              <h2 class="hero-card__title">Глобальный профессиональный опыт обучения за рубежом</h2>
+              <p>Погрузитесь в академическую программу, проходя практику в разных городах, ощущая
+                настоящий студенческий стиль жизни!</p>
+              <button class="hero-card__button" type="button">Подробнее</button>
+            </div>
+          </li>
+          <li class="hero__item hero-card swiper-slide">
+            <div class="hero-card__picture">
+              <picture>
+                <source media="(min-width: 1440px)" width="1440" height="800" type="image/webp"
+                  srcset="img/hero-img-desktop-2@1x.webp 1x, img/hero-img-desktop-2@2x.webp 2x">
+                <source media="(min-width: 768px)" width="768" height="1024" type="image/webp"
+                  srcset="img/hero-img-tablet-2@1x.webp 1x, img/hero-img-tablet-2@2x.webp 2x">
+                <source width="320" height="568" type="image/webp"
+                  srcset="img/hero-img-mobile-2@1x.webp 1x, img/hero-img-mobile-2@2x.webp 2x">
+                <source media="(min-width: 1440px)" width="1440" height="800" type="image/jpeg"
+                  srcset="img/hero-img-desktop-2@1x.jpg 1x, img/hero-img-desktop-2@2x.jpg 2x">
+                <source media="(min-width: 768px)" width="768" height="1024" type="image/jpeg"
+                  srcset="img/hero-img-tablet-2@1x.jpg 1x, img/hero-img-tablet-2@2x.jpg 2x">
+                <img src="img/hero-img-mobile-2@1x.jpg" srcset="img/hero-img-mobile-2@2x.jpg 2x" width="320"
+                  height="568" alt="Гуппа волонтёров разной национальности">
+              </picture>
+            </div>
+            <div class="hero-card__content">
+              <h2 class="hero-card__title">Волонтёрские программы — внесите свой вклад в общество</h2>
+              <p>Возможности для преподавания, органического сельского хозяйства, устойчивого образа жизни и другое.</p>
+              <button class="hero-card__button" type="button">Подробнее</button>
+            </div>
+          </li>
+          <li class="hero__item hero__item--active hero-card swiper-slide">
+            <div class="hero-card__picture">
+              <picture>
+                <source media="(min-width: 1440px)" width="1440" height="800" type="image/webp"
+                  srcset="img/hero-img-desktop-3@1x.webp 1x, img/hero-img-desktop-3@2x.webp 2x">
+                <source media="(min-width: 768px)" width="768" height="1024" type="image/webp"
+                  srcset="img/hero-img-tablet-3@1x.webp 1x, img/hero-img-tablet-3@2x.webp 2x">
+                <source width="320" height="568" type="image/webp"
+                  srcset="img/hero-img-mobile-3@1x.webp 1x, img/hero-img-mobile-3@2x.webp 2x">
+                <source media="(min-width: 1440px)" width="1440" height="800" type="image/jpeg"
+                  srcset="img/hero-img-desktop-3@1x.jpg 1x, img/hero-img-desktop-3@2x.jpg 2x">
+                <source media="(min-width: 768px)" width="768" height="1024" type="image/jpeg"
+                  srcset="img/hero-img-tablet-3@1x.jpg 1x, img/hero-img-tablet-3@2x.jpg 2x">
+                <img src="img/hero-img-mobile-3@1x.jpg" srcset="img/hero-img-mobile-3@2x.jpg 2x" width="320"
+                  height="568" alt="Мжчина и две женщины обсуждают проект за офисным столом">
+              </picture>
+            </div>
+            <div class="hero-card__content">
+              <h2 class="hero-card__title">Программы стажировок в крупнейших компаниях мира</h2>
+              <p>Получите незаменимый опыт работы в ведущих мировых компаниях и государственных организациях.</p>
+              <button class="hero-card__button" type="button">Подробнее</button>
+            </div>
+          </li>
+        </ul>
+      </section>
+    </header>
     <!-- пример использования спрайта -->
-    <img src="/__spritemap#sprite-logo-view" width="30" height="30" alt="Это спрайт">
     <!-- <svg>
       <use href="/__spritemap#sprite-user"></use>
     </svg> -->
-    <!-- примеры требуемых атрибутов data-test="*" -->
-    <div data-test="hero">hero</div>
-    <div data-test="about">about</div>
-    <div data-test="programs">programs</div>
-    <div data-test="grant">grant</div>
-    <div data-test="news">news</div>
-    <div data-test="FAQ">FAQ</div>
-    <div data-test="reviews">reviews</div>
-    <div data-test="contacts">contacts</div>
-    <div data-test="form">form</div>
+    <main class="body__main">
+      <div data-test="about">about</div>
+      <div data-test="programs">programs</div>
+      <div data-test="grant">grant</div>
+      <div data-test="news">news</div>
+      <div data-test="FAQ">FAQ</div>
+      <div data-test="reviews">reviews</div>
+      <div data-test="contacts">contacts</div>
+      <div data-test="form">form</div>
+    </main>
     <div data-test="footer">footer</div>
-    <script type="module" src="js/main.js"></script>
-  </body>
+  </div>
+  <script type="module" src="js/main.js"></script>
+</body>
 
 </html>
