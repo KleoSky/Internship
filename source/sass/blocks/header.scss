@@ -1,6 +1,8 @@
 .header {
-  padding: 20px 15px;
-  background-color: var(--everlay-page, #a9afb7);
+  background-color: var(--overlay-page, #a9afb7);
+  display: grid;
+  grid-template-columns: 15px 1fr 15px;
+  grid-template-rows: 20px min-content auto 20px;
 }
 
 .header__main {
@@ -9,6 +11,9 @@
   position: relative;
   display: flex;
   justify-content: space-between;
+  grid-column: 2 / 3;
+  grid-row: 2 / 3;
+  z-index: 3;
 }
 
 .header__logo-wrapper {
@@ -23,4 +28,9 @@
   &--closed {
     display: none;
   }
+}
+
+.header__hero {
+  grid-column: 1 / -1;
+  grid-row: 1 / -1;
 }

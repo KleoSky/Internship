@@ -18,11 +18,12 @@
     <header class="body__header header" data-test="hero">
       <div class="header__main">
         <div class="header__logo-wrapper">
-          <img class="header__logo" src="/__spritemap#sprite-logo-view" width="30" height="30" alt="Логотип сайта Internship">
+          <img class="header__logo" src="/__spritemap#sprite-logo-view" width="30" height="30"
+            alt="Логотип сайта Internship">
         </div>
         <nav class="header__nav nav">
           <button class="nav__button nav__button--closed" type="button">Меню</button>
-          <ul class="nav__list nav__list--closed">
+          <ul class="nav__list nav__list--opened">
             <li class="nav__item">
               <a class="nav__link" href="#">О проекте</a>
             </li>
@@ -51,6 +52,11 @@
             </li>
             <li class="nav__item">
               <a class="nav__link nav__link--select" href="#">Новости</a>
+              <ul class="nav__sublist nav__sublist--closed">
+                <li class="nav__subitem">
+                  <a class="nav__sublink" href="#">Интервью</a>
+                </li>
+              </ul>
             </li>
             <li class="nav__item">
               <a class="nav__link" href="#">Контакты</a>
@@ -58,80 +64,100 @@
           </ul>
         </nav>
       </div>
-      <section class="header__hero hero swiper">
+      <section class="header__hero hero">
         <h1 class="visually-hidden">Проект "Стажировка" - твоя возможность начать карьеру в успешной компании!</h1>
-        <ul class="hero__list swiper-wrapper">
-          <li class="hero__item hero__item--active hero-card swiper-slide">
-            <div class="hero-card__picture">
-              <picture>
-                <source media="(min-width: 1440px)" width="1440" height="800" type="image/webp"
-                  srcset="img/hero-img-desktop-1@1x.webp 1x, img/hero-img-desktop-1@2x.webp 2x">
-                <source media="(min-width: 768px)" width="768" height="1024" type="image/webp"
-                  srcset="img/hero-img-tablet-1@1x.webp 1x, img/hero-img-tablet-1@2x.webp 2x">
-                <source width="320" height="568" type="image/webp"
-                  srcset="img/hero-img-mobile-1@1x.webp 1x, img/hero-img-mobile-1@2x.webp 2x">
-                <source media="(min-width: 1440px)" width="1440" height="800" type="image/jpeg"
-                  srcset="img/hero-img-desktop-1@1x.jpg 1x, img/hero-img-desktop-1@2x.jpg 2x">
-                <source media="(min-width: 768px)" width="768" height="1024" type="image/jpeg"
-                  srcset="img/hero-img-tablet-1@1x.jpg 1x, img/hero-img-tablet-1@2x.jpg 2x">
-                <img src="img/hero-img-mobile-1@1x.jpg" srcset="img/hero-img-mobile-1@2x.jpg 2x" width="320"
-                  height="568" alt="Кудрявая студентка в очках">
-              </picture>
-            </div>
-            <div class="hero-card__content">
-              <h2 class="hero-card__title">Глобальный профессиональный опыт обучения за рубежом</h2>
-              <p>Погрузитесь в академическую программу, проходя практику в разных городах, ощущая
-                настоящий студенческий стиль жизни!</p>
-              <button class="hero-card__button" type="button">Подробнее</button>
-            </div>
-          </li>
-          <li class="hero__item hero-card swiper-slide">
-            <div class="hero-card__picture">
-              <picture>
-                <source media="(min-width: 1440px)" width="1440" height="800" type="image/webp"
-                  srcset="img/hero-img-desktop-2@1x.webp 1x, img/hero-img-desktop-2@2x.webp 2x">
-                <source media="(min-width: 768px)" width="768" height="1024" type="image/webp"
-                  srcset="img/hero-img-tablet-2@1x.webp 1x, img/hero-img-tablet-2@2x.webp 2x">
-                <source width="320" height="568" type="image/webp"
-                  srcset="img/hero-img-mobile-2@1x.webp 1x, img/hero-img-mobile-2@2x.webp 2x">
-                <source media="(min-width: 1440px)" width="1440" height="800" type="image/jpeg"
-                  srcset="img/hero-img-desktop-2@1x.jpg 1x, img/hero-img-desktop-2@2x.jpg 2x">
-                <source media="(min-width: 768px)" width="768" height="1024" type="image/jpeg"
-                  srcset="img/hero-img-tablet-2@1x.jpg 1x, img/hero-img-tablet-2@2x.jpg 2x">
-                <img src="img/hero-img-mobile-2@1x.jpg" srcset="img/hero-img-mobile-2@2x.jpg 2x" width="320"
-                  height="568" alt="Гуппа волонтёров разной национальности">
-              </picture>
-            </div>
-            <div class="hero-card__content">
-              <h2 class="hero-card__title">Волонтёрские программы — внесите свой вклад в общество</h2>
-              <p>Возможности для преподавания, органического сельского хозяйства, устойчивого образа жизни и другое.</p>
-              <button class="hero-card__button" type="button">Подробнее</button>
-            </div>
-          </li>
-          <li class="hero__item hero__item--active hero-card swiper-slide">
-            <div class="hero-card__picture">
-              <picture>
-                <source media="(min-width: 1440px)" width="1440" height="800" type="image/webp"
-                  srcset="img/hero-img-desktop-3@1x.webp 1x, img/hero-img-desktop-3@2x.webp 2x">
-                <source media="(min-width: 768px)" width="768" height="1024" type="image/webp"
-                  srcset="img/hero-img-tablet-3@1x.webp 1x, img/hero-img-tablet-3@2x.webp 2x">
-                <source width="320" height="568" type="image/webp"
-                  srcset="img/hero-img-mobile-3@1x.webp 1x, img/hero-img-mobile-3@2x.webp 2x">
-                <source media="(min-width: 1440px)" width="1440" height="800" type="image/jpeg"
-                  srcset="img/hero-img-desktop-3@1x.jpg 1x, img/hero-img-desktop-3@2x.jpg 2x">
-                <source media="(min-width: 768px)" width="768" height="1024" type="image/jpeg"
-                  srcset="img/hero-img-tablet-3@1x.jpg 1x, img/hero-img-tablet-3@2x.jpg 2x">
-                <img src="img/hero-img-mobile-3@1x.jpg" srcset="img/hero-img-mobile-3@2x.jpg 2x" width="320"
-                  height="568" alt="Мжчина и две женщины обсуждают проект за офисным столом">
-              </picture>
-            </div>
-            <div class="hero-card__content">
-              <h2 class="hero-card__title">Программы стажировок в крупнейших компаниях мира</h2>
-              <p>Получите незаменимый опыт работы в ведущих мировых компаниях и государственных организациях.</p>
-              <button class="hero-card__button" type="button">Подробнее</button>
-            </div>
-          </li>
-        </ul>
+        <div class="hero__swiper swiper">
+          <ul class="hero__list swiper-wrapper">
+            <li class="hero__item hero__item--active hero-card swiper-slide">
+              <div class="hero-card__picture">
+                <picture>
+                  <source media="(min-width: 1440px)" width="1440" height="800" type="image/webp"
+                    srcset="img/hero-img-desktop-1@1x.webp 1x, img/hero-img-desktop-1@2x.webp 2x">
+                  <source media="(min-width: 768px)" width="768" height="1024" type="image/webp"
+                    srcset="img/hero-img-tablet-1@1x.webp 1x, img/hero-img-tablet-1@2x.webp 2x">
+                  <source width="320" height="568" type="image/webp"
+                    srcset="img/hero-img-mobile-1@1x.webp 1x, img/hero-img-mobile-1@2x.webp 2x">
+                  <source media="(min-width: 1440px)" width="1440" height="800" type="image/jpeg"
+                    srcset="img/hero-img-desktop-1@1x.jpg 1x, img/hero-img-desktop-1@2x.jpg 2x">
+                  <source media="(min-width: 768px)" width="768" height="1024" type="image/jpeg"
+                    srcset="img/hero-img-tablet-1@1x.jpg 1x, img/hero-img-tablet-1@2x.jpg 2x">
+                  <img src="img/hero-img-mobile-1@1x.jpg" srcset="img/hero-img-mobile-1@2x.jpg 2x" width="320"
+                    height="568" alt="Кудрявая студентка в очках">
+                </picture>
+              </div>
+              <div class="hero-card__content">
+                <h2 class="hero-card__title">Глобальный профессиональный опыт обучения за рубежом</h2>
+                <p>Погрузитесь в академическую программу, проходя практику в разных городах, ощущая
+                  настоящий студенческий стиль жизни!</p>
+                <div class="hero-card__button-wrapper">
+                  <button class="hero-card__button" type="button">Подробнее</button>
+                </div>
+              </div>
+            </li>
+            <li class="hero__item hero-card swiper-slide">
+              <div class="hero-card__picture">
+                <picture>
+                  <source media="(min-width: 1440px)" width="1440" height="800" type="image/webp"
+                    srcset="img/hero-img-desktop-2@1x.webp 1x, img/hero-img-desktop-2@2x.webp 2x">
+                  <source media="(min-width: 768px)" width="768" height="1024" type="image/webp"
+                    srcset="img/hero-img-tablet-2@1x.webp 1x, img/hero-img-tablet-2@2x.webp 2x">
+                  <source width="320" height="568" type="image/webp"
+                    srcset="img/hero-img-mobile-2@1x.webp 1x, img/hero-img-mobile-2@2x.webp 2x">
+                  <source media="(min-width: 1440px)" width="1440" height="800" type="image/jpeg"
+                    srcset="img/hero-img-desktop-2@1x.jpg 1x, img/hero-img-desktop-2@2x.jpg 2x">
+                  <source media="(min-width: 768px)" width="768" height="1024" type="image/jpeg"
+                    srcset="img/hero-img-tablet-2@1x.jpg 1x, img/hero-img-tablet-2@2x.jpg 2x">
+                  <img src="img/hero-img-mobile-2@1x.jpg" srcset="img/hero-img-mobile-2@2x.jpg 2x" width="320"
+                    height="568" alt="Гуппа волонтёров разной национальности">
+                </picture>
+              </div>
+              <div class="hero-card__content">
+                <h2 class="hero-card__title">Волонтёрские программы — внесите свой вклад в общество</h2>
+                <p>Возможности для преподавания, органического сельского хозяйства, устойчивого образа жизни и другое.
+                </p>
+                <div class="hero-card__button-wrapper">
+                  <button class="hero-card__button" type="button">Подробнее</button>
+                </div>
+              </div>
+            </li>
+            <li class="hero__item hero-card swiper-slide">
+              <div class="hero-card__picture">
+                <picture>
+                  <source media="(min-width: 1440px)" width="1440" height="800" type="image/webp"
+                    srcset="img/hero-img-desktop-3@1x.webp 1x, img/hero-img-desktop-3@2x.webp 2x">
+                  <source media="(min-width: 768px)" width="768" height="1024" type="image/webp"
+                    srcset="img/hero-img-tablet-3@1x.webp 1x, img/hero-img-tablet-3@2x.webp 2x">
+                  <source width="320" height="568" type="image/webp"
+                    srcset="img/hero-img-mobile-3@1x.webp 1x, img/hero-img-mobile-3@2x.webp 2x">
+                  <source media="(min-width: 1440px)" width="1440" height="800" type="image/jpeg"
+                    srcset="img/hero-img-desktop-3@1x.jpg 1x, img/hero-img-desktop-3@2x.jpg 2x">
+                  <source media="(min-width: 768px)" width="768" height="1024" type="image/jpeg"
+                    srcset="img/hero-img-tablet-3@1x.jpg 1x, img/hero-img-tablet-3@2x.jpg 2x">
+                  <img src="img/hero-img-mobile-3@1x.jpg" srcset="img/hero-img-mobile-3@2x.jpg 2x" width="320"
+                    height="568" alt="Мжчина и две женщины обсуждают проект за офисным столом">
+                </picture>
+              </div>
+              <div class="hero-card__content">
+                <h2 class="hero-card__title">Программы стажировок в крупнейших компаниях мира</h2>
+                <p>Получите незаменимый опыт работы в ведущих мировых компаниях и государственных организациях.</p>
+                <div class="hero-card__button-wrapper">
+                  <button class="hero-card__button" type="button">Подробнее</button>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div class="hero__bullets swiper-pagination">
+          <button class="hero__bullet hero__bullet--active" type="button">
+            <span class="visually-hidden">Показать первую программу</span>
+          </button>
+          <button class="hero__bullet" type="button">
+            <span class="visually-hidden">Показать вторую программу</span>
+          </button>
+          <button class="hero__bullet" type="button">
+            <span class="visually-hidden">Показать третью программу</span>
+          </button>
+        </div>
       </section>
     </header>
     <!-- пример использования спрайта -->
