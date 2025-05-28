@@ -5,6 +5,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Internship - твоя возможность для старта карьеры зарубежом</title>
+  <link rel="preload" href="fonts/manrope/manrope-light.woff2" type="font/woff2" as="font"
+    crossorigin="anonymous">
+    <link rel="preload" href="fonts/manrope/manrope-medium.woff2" type="font/woff2" as="font"
+    crossorigin="anonymous">
+    <link rel="preload" href="fonts/manrope/manrope-regular.woff2" type="font/woff2" as="font"
+    crossorigin="anonymous">
   <link rel="stylesheet" href="sass/style.scss">
   <link rel="icon" href="favicon.ico">
   <link rel="icon" sizes="32x32" href="public/32.png" type="image/png">
@@ -18,8 +24,11 @@
     <header class="body__header header" data-test="hero">
       <div class="header__main">
         <div class="header__logo-wrapper">
-          <img class="header__logo" src="/__spritemap#sprite-logo-view" width="30" height="30"
-            alt="Логотип сайта Internship">
+          <!-- <img class="header__logo" src="/__spritemap#sprite-logo-view" width="30" height="30"
+            alt="Логотип сайта Internship"> -->
+          <svg width="30" height="30">
+            <use href="/__spritemap#sprite-logo"></use>
+          </svg>
         </div>
         <nav class="header__nav nav">
           <button class="nav__button nav__button--closed" type="button">Меню</button>
@@ -161,9 +170,7 @@
       </section>
     </header>
     <!-- пример использования спрайта -->
-    <!-- <svg>
-      <use href="/__spritemap#sprite-user"></use>
-    </svg> -->
+
     <main class="body__main">
       <div data-test="about">about</div>
       <div data-test="programs">programs</div>
