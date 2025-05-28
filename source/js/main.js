@@ -3,9 +3,9 @@
 // import {Navigation, Pagination} from "swiper/modules";
 // import 'swiper/css';
 
-import { menuOpen, subMenuOpen } from "./modules/header";
+import { menuOpen, subMenuOpen } from './modules/header';
 menuOpen();
 subMenuOpen();
 
-import { initSwiperHero } from "./modules/hero";
+import { initSwiperHero } from './modules/hero';
 initSwiperHero();
