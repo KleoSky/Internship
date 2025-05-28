@@ -5,12 +5,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Internship - твоя возможность для старта карьеры зарубежом</title>
-  <link rel="preload" href="fonts/manrope/manrope-light.woff2" type="font/woff2" as="font"
-    crossorigin="anonymous">
-    <link rel="preload" href="fonts/manrope/manrope-medium.woff2" type="font/woff2" as="font"
-    crossorigin="anonymous">
-    <link rel="preload" href="fonts/manrope/manrope-regular.woff2" type="font/woff2" as="font"
-    crossorigin="anonymous">
+  <link rel="preload" href="fonts/manrope/manrope-light.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/manrope/manrope-medium.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/manrope/manrope-regular.woff2" type="font/woff2" as="font" crossorigin="anonymous">
   <link rel="stylesheet" href="sass/style.scss">
   <link rel="icon" href="favicon.ico">
   <link rel="icon" sizes="32x32" href="public/32.png" type="image/png">
@@ -99,7 +96,7 @@
                 <p>Погрузитесь в академическую программу, проходя практику в разных городах, ощущая
                   настоящий студенческий стиль жизни!</p>
                 <div class="hero-card__button-wrapper">
-                  <button class="hero-card__button" type="button">Подробнее</button>
+                  <button class="hero-card__button main-button" type="button">Подробнее</button>
                 </div>
               </div>
             </li>
@@ -125,7 +122,7 @@
                 <p>Возможности для преподавания, органического сельского хозяйства, устойчивого образа жизни и другое.
                 </p>
                 <div class="hero-card__button-wrapper">
-                  <button class="hero-card__button" type="button">Подробнее</button>
+                  <button class="hero-card__button main-button" type="button">Подробнее</button>
                 </div>
               </div>
             </li>
@@ -150,7 +147,7 @@
                 <h2 class="hero-card__title">Программы стажировок в крупнейших компаниях мира</h2>
                 <p>Получите незаменимый опыт работы в ведущих мировых компаниях и государственных организациях.</p>
                 <div class="hero-card__button-wrapper">
-                  <button class="hero-card__button" type="button">Подробнее</button>
+                  <button class="hero-card__button main-button" type="button">Подробнее</button>
                 </div>
               </div>
             </li>
@@ -169,10 +166,52 @@
         </div>
       </section>
     </header>
-    <!-- пример использования спрайта -->
-
-    <main class="body__main">
-      <div data-test="about">about</div>
+    <main class="body__main main">
+      <section class="main__about about" data-test="about">
+        <h2 class="about__title">О проекте «Стажировка»</h2>
+        <div class="about__head">
+          <p>«Стажировка» — совместный проект
+            правительств и волонтёрских бригад.</p>
+        </div>
+        <div class="about__description">
+          <h3>Наша цель</h3>
+          <p>Наша деятельность направлена
+            на повышение квалификации молодых
+            специалистов на ранних и средних
+            стадиях карьеры, предоставляя
+            им инструменты для решения сложных
+            проблем, с которыми сталкиваются в мире.
+            Цель центра — наделить этих людей
+            способностью инициировать значимые
+            изменения.</p>
+        </div>
+        <button class="about__button main-button" type="button">Подробнее о проекте</button>
+        <ul class="about__list">
+          <li class="about__item">
+            <h4>Более 250 программ</h3>
+            <p>Учебных и рабочих, разной
+              длительностью от 3 месяцев
+              до 1 года</p>
+          </li>
+          <li class="about__item">
+            <h4>Более 3000 участников</h3>
+            <p>Уже успешно прошли программу от «Стажировка» 
+              и остались в разных странах</p>
+          </li>
+          <li class="about__item">
+            <h4>Участники из 60 стран</h3>
+            <p>Студенты со всего мира приезжают на программу
+              «Стажировки» от 3 месяцев до 1 года</p>
+          </li>
+          <li class="about__item">
+            <h4>от 4 200 $<br>
+              до 8 400 $</h3>
+            <p>Грант всем участникам
+              для комфортного прохождения
+              программы</p>
+          </li>
+        </ul>
+      </section>
       <div data-test="programs">programs</div>
       <div data-test="grant">grant</div>
       <div data-test="news">news</div>

@@ -1,0 +1,13 @@
+.main__about {
+    width: 320px;
+    margin: 0 auto;
+    padding: 50px 15px;
+    box-sizing: border-box;
+}
+
+@media (min-width: 768px) {
+    .main__about {
+        width: 768px;
+        padding: 50px 45px;
+    }
+}
