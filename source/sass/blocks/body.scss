@@ -7,18 +7,6 @@
   position: relative;
 }
 
-.body-overlay::before {
-  content: "";
-  width: 100%;
-  height: 100%;
-  display: block;
-  background-color: var(--overlay-page, rgba(13, 29, 51, 0.4));
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 3;
-}
-
 .body__main {
   flex-grow: 1;
 }

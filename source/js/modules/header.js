@@ -13,11 +13,12 @@ const menuClose = () => {
   navList.classList.remove('nav__list--opened');
   navList.classList.add('nav__list--closed');
   body.classList.remove('body-overlay');
+
   document.removeEventListener('click', handleOutsideClick);
 };
 
 // Проверка клика вне навигации
-function handleOutsideClick (event) {
+function handleOutsideClick(event) {
   const isNav = event.target.closest('.nav');
   const isButton = event.target.closest('.nav__button');
 
@@ -42,6 +43,7 @@ const menuOpen = () => {
       navList.classList.remove('nav__list--closed');
       navList.classList.add('nav__list--opened');
       body.classList.add('body-overlay');
+
       document.addEventListener('click', handleOutsideClick);
     }
   });
@@ -75,8 +77,7 @@ const subMenuOpen = () => {
     event.preventDefault();
     const link = event.currentTarget;
 
-    // Если экран меньше 1440px, обрабатываем тач, иначе — клик
-    if (window.innerWidth < 1440) {
+    if (window.innerWidth < 425) {
       if (event.type === 'touchstart') {
         link.touchStartX = event.touches[0].clientX;
         link.touchStartY = event.touches[0].clientY;

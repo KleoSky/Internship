@@ -11,3 +11,10 @@
         padding: 50px 45px;
     }
 }
+
+@media (min-width: 1440px) {
+  .main__about {
+      width: 1440px;
+      padding: 70px 100px 60px;
+  }
+}
