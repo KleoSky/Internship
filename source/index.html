@@ -227,9 +227,9 @@
       <p class="modal__description">Оставьте ваши контакты, если у вас остались вопросы – мы на них ответим!</p>
       <form class="modal__form modal-form" action="https://echo.htmlacademy.ru/" method="post">
         <label class="modal-form__label" for="name">Имя</label>
-        <input class="modal-form__input" type="text" name="name-input" id="name" required>
+        <input class="modal-form__name-input" type="text" name="name-input" id="name" pattern="[A-Za-zA-Яа-яЁё\s]+" required>
         <label class="modal-form__label" for="tel">Телефон</label>
-        <input class="modal-form__input" type="tel" name="tel-input" id="tel" required>
+        <input class="modal-form__tel-input" type="tel" name="tel-input" id="tel" pattern="^[0-9]+$" required>
         <label class="modal-form__label" for="city">Выберите город</label>
         <select class="modal-form__select" name="city-choice" id="city" required>
           <option value=""></option>
@@ -243,7 +243,7 @@
         </select>
         <div class="modal-form__agreement">
           <label class="modal-form__label-agree" for="agreement">Я согласен на обработку моих персональных данных</label>
-          <input class="modal-form__input-agree" type="checkbox" name="agree" id="agreement">
+          <input class="modal-form__input-agree" type="checkbox" name="agree" id="agreement" required>
         </div>
         <button class="modal-form__buttom main-button" type="submit">Отправить</button>
       </form>

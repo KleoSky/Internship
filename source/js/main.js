@@ -9,3 +9,6 @@ subMenuOpen();
 
 import { initSwiperHero } from './modules/hero';
 initSwiperHero();
+
+import { initFormValidation } from './modules/modal';
+initFormValidation();
