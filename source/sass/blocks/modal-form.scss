@@ -10,7 +10,8 @@
     opacity: 0.8;
 }
 
-.modal-form__input,
+.modal-form__name-input,
+.modal-form__tel-input,
 .modal-form__select {
     width: 260px;
     min-height: 44px;
@@ -27,6 +28,7 @@
     background-size: 16px 16px;
     background-repeat: no-repeat;
     background-position: 90% 50%;
+    cursor: pointer;
 }
 
 .modal-form__agreement {
@@ -49,11 +51,26 @@
     border: 1px solid var(--bg-accent, #000080);
     border-radius: 2px;
     background-color: var(--bg-accent, #000080);
+    cursor: pointer;
 }
 
 .modal-form__input-agree:checked {
-    background-image: url("/__spritemap#sprite-check-modal-icon-view");
-    background-size: 16px 16px;
+    background-color: var(--color-second, #ffffff);
+    background-image: url("/__spritemap#sprite-check-icon-view");
+    background-size: 20px 18px;
     background-repeat: no-repeat;
     background-position: 50% 50%;
+    border: 1px solid var(--color-second, #ffffff);
+}
+
+.modal-form__buttom {
+    padding: 15px 68px 15px 30px;
+
+    &::before {
+        left: 220px;
+    }
+
+    &::after {
+        left: 233px;
+    }
 }
