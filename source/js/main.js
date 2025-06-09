@@ -10,5 +10,11 @@ subMenuOpen();
 import { initSwiperHero } from './modules/hero';
 initSwiperHero();
 
-import { initFormValidation } from './modules/modal';
+import { initFormValidation } from './modules/form-validate';
 initFormValidation();
+
+import { modalOpen } from './modules/modal';
+modalOpen();
+
+import { initSelectArrow } from './modules/select';
+initSelectArrow();

@@ -19,16 +19,24 @@
     border-radius: 8px;
     box-sizing: border-box;
     margin-bottom: 15px;
+    padding-left: 5px;
 }
 
 .modal-form__select {
     background-color: transparent;
     appearance: none;
-    background-image: url("/__spritemap#sprite-popup-icon-view");
     background-size: 16px 16px;
     background-repeat: no-repeat;
     background-position: 90% 50%;
     cursor: pointer;
+}
+
+.modal-form__select--closed {
+  background-image: url("/__spritemap#sprite-popup-icon-view");
+}
+
+.modal-form__select--opened {
+  background-image: url("/__spritemap#sprite-popup-icon-open-view");
 }
 
 .modal-form__agreement {
@@ -63,7 +71,7 @@
     border: 1px solid var(--color-second, #ffffff);
 }
 
-.modal-form__buttom {
+.modal-form__button {
     padding: 15px 68px 15px 30px;
 
     &::before {
@@ -73,4 +81,20 @@
     &::after {
         left: 233px;
     }
+}
+
+.modal-form__button-close {
+  position: absolute;
+  padding: 0;
+  top: 20px;
+  right: 20px;
+  width: 16px;
+  height: 16px;
+  background-color: var(--bg-accent, #000080);
+  mask: url("/__spritemap#sprite-cross-icon-view") center / 16px 16px no-repeat;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
 }
