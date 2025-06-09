@@ -221,7 +221,7 @@
     <div data-test="footer">footer</div>
   </div>
   <script type="module" src="js/main.js"></script>
-  <div class="body__modal-wrapper body__modal-wrapper--opened">
+  <div class="body__modal-wrapper body__modal-wrapper--closed">
     <div class="body__modal modal">
       <h2 class="modal__title" id="Напишите нам">Напишите нам</h2>
       <p class="modal__description">Оставьте ваши контакты, если у вас остались вопросы – мы на них ответим!</p>
@@ -232,14 +232,14 @@
         <input class="modal-form__tel-input" type="tel" name="tel-input" id="tel" pattern="^[0-9]+{10}" required>
         <label class="modal-form__label" for="city">Выберите город</label>
         <select class="modal-form__select modal-form__select--closed" name="city-choice" id="city" required>
-          <option value=""></option>
-          <option value="moscow">Москва</option>
-          <option value="petersburg">Санкт-Петербург</option>
-          <option value="novosibirsk">Новосибирск</option>
-          <option value="nijniy novgorod">Нижний Новгород</option>
-          <option value="ekaterinburg">Екатеринбург</option>
-          <option value="vladivistok">Владивосток</option>
-          <option value="kaliningrad">Калининград</option>
+          <option class="modal-form__option" value=""></option>
+          <option class="modal-form__option" value="moscow">Москва</option>
+          <option class="modal-form__option" value="petersburg">Санкт-Петербург</option>
+          <option class="modal-form__option" value="novosibirsk">Новосибирск</option>
+          <option class="modal-form__option" value="nijniy novgorod">Нижний Новгород</option>
+          <option class="modal-form__option" value="ekaterinburg">Екатеринбург</option>
+          <option class="modal-form__option" value="vladivistok">Владивосток</option>
+          <option class="modal-form__option" value="kaliningrad">Калининград</option>
         </select>
         <div class="modal-form__agreement">
           <label class="modal-form__label-agree" for="agreement">Я согласен на обработку моих персональных данных</label>

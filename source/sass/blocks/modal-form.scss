@@ -1,34 +1,39 @@
 .modal-form {
-    display: flex;
-    flex-direction: column;
-    margin-top: 25px;
+  display: flex;
+  flex-direction: column;
+  margin-top: 25px;
 }
 
 .modal-form__label {
-    line-height: 1;
-    margin-bottom: 8px;
-    opacity: 0.8;
+  line-height: 1;
+  margin-bottom: 8px;
+  opacity: 0.8;
 }
 
 .modal-form__name-input,
 .modal-form__tel-input,
 .modal-form__select {
-    width: 260px;
-    min-height: 44px;
-    border: 1px solid rgba(72, 72, 72, 0.3);
-    border-radius: 8px;
-    box-sizing: border-box;
-    margin-bottom: 15px;
-    padding-left: 5px;
+  width: 260px;
+  min-height: 44px;
+  border: 1px solid rgba(72, 72, 72, 0.3);
+  border-radius: 8px;
+  box-sizing: border-box;
+  margin-bottom: 15px;
+  padding-left: 5px;
+
+  &:hover,
+  &:active {
+    border-color: #484848;
+  }
 }
 
 .modal-form__select {
-    background-color: transparent;
-    appearance: none;
-    background-size: 16px 16px;
-    background-repeat: no-repeat;
-    background-position: 90% 50%;
-    cursor: pointer;
+  background-color: transparent;
+  appearance: none;
+  background-size: 16px 16px;
+  background-repeat: no-repeat;
+  background-position: 90% 50%;
+  cursor: pointer;
 }
 
 .modal-form__select--closed {
@@ -40,47 +45,47 @@
 }
 
 .modal-form__agreement {
-    display: flex;
-    flex-direction: row-reverse;
-    align-items: center;
-    gap: 10px;
-    margin-bottom: 25px;
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 25px;
 }
 
 .modal-form__label-agree {
-    font-size: 12px;
-    line-height: 1.17;
+  font-size: 12px;
+  line-height: 1.17;
 }
 
 .modal-form__input-agree {
-    appearance: none;
-    width: 30px;
-    height: 23px;
-    border: 1px solid var(--bg-accent, #000080);
-    border-radius: 2px;
-    background-color: var(--bg-accent, #000080);
-    cursor: pointer;
+  appearance: none;
+  width: 30px;
+  height: 23px;
+  border: 1px solid var(--bg-accent, #000080);
+  border-radius: 2px;
+  background-color: var(--bg-accent, #000080);
+  cursor: pointer;
 }
 
 .modal-form__input-agree:checked {
-    background-color: var(--color-second, #ffffff);
-    background-image: url("/__spritemap#sprite-check-icon-view");
-    background-size: 20px 18px;
-    background-repeat: no-repeat;
-    background-position: 50% 50%;
-    border: 1px solid var(--color-second, #ffffff);
+  background-color: var(--color-second, #ffffff);
+  background-image: url("/__spritemap#sprite-check-icon-view");
+  background-size: 20px 18px;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  border: 1px solid var(--color-second, #ffffff);
 }
 
 .modal-form__button {
-    padding: 15px 68px 15px 30px;
+  padding: 15px 68px 15px 30px;
 
-    &::before {
-        left: 220px;
-    }
+  &::before {
+    left: 220px;
+  }
 
-    &::after {
-        left: 233px;
-    }
+  &::after {
+    left: 233px;
+  }
 }
 
 .modal-form__button-close {
@@ -97,4 +102,73 @@
   justify-content: center;
   align-items: center;
   cursor: pointer;
+}
+
+@media (min-width: 768px) {
+  .modal-form {
+    margin-top: 30px;
+  }
+
+  .modal-form__label {
+    line-height: inherit;
+    margin-bottom: 12px;
+  }
+
+  .modal-form__name-input,
+  .modal-form__tel-input,
+  .modal-form__select {
+    width: 350px;
+    min-height: 50px;
+    margin-bottom: 20px;
+  }
+
+  .modal-form__select {
+    background-position: 314px 50%;
+  }
+
+  .modal-form__agreement {
+    justify-content: left;
+    margin-bottom: 30px;
+  }
+
+  .modal-form__label-agree {
+    line-height: 1;
+  }
+
+  .modal-form__input-agree {
+    width: 20px;
+    height: 20px;
+  }
+
+  .modal-form__input-agree:checked {
+    background-size: 20px 20px;
+  }
+
+  .modal-form__button {
+    width: 194px;
+    margin: 0 auto;
+    padding: 20px 80px 20px 30px;
+
+    &::before {
+      left: 140px;
+    }
+
+    &::after {
+      left: 159px;
+    }
+  }
+
+  .modal-form__button-close {
+    top: 30px;
+    right: 30px;
+    width: 22px;
+    height: 22px;
+    mask: url("/__spritemap#sprite-cross-icon-view") center / 18px 18px no-repeat;
+  }
+}
+
+@media (min-width: 1440px) {
+  .modal-form__label {
+    line-height: 1.3;
+  }
 }

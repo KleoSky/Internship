@@ -104,6 +104,12 @@ function hideError(input, errorElement) {
 }
 
 function getErrorElement(input) {
+  if (input.type === 'checkbox') {
+    return {
+      textContent: '',
+      style: {}
+    }
+  }
   let errorElement = input.nextElementSibling;
 
   if (!errorElement || !errorElement.classList.contains('error-message')) {
@@ -123,7 +129,7 @@ function handleFormSubmit(e) {
   const form = e.target;
   let isFormValid = true;
 
-  const inputs = form.querySelectorAll('input');
+  const inputs = form.querySelectorAll('input, select');
   inputs.forEach((input) => {
     const isValid = validateField(input);
     if (!isValid) {

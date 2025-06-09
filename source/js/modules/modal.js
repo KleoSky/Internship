@@ -29,8 +29,8 @@ const handleOutsideClick = (event) => {
 
 // Открытие модального окна
 const modalOpen = () => {
-  // modal.classList.remove('body__modal-wrapper--opened');
-  // modal.classList.add('body__modal-wrapper--closed');
+  modal.classList.remove('body__modal-wrapper--opened');
+  modal.classList.add('body__modal-wrapper--closed');
 
   aboutButton.addEventListener('click', () => {
     if (modal.classList.contains('body__modal-wrapper--opened')) {

@@ -25,3 +25,33 @@
     margin: 15px 0;
     padding: 0 15px;
 }
+
+@media (min-width: 768px) {
+  .modal {
+    width: 510px;
+    padding: 60px 80px;
+  }
+
+  .modal__title {
+    font-size: 28px;
+    margin-bottom: 20px;
+  }
+
+  .modal__description {
+    font-size: 16px;
+    line-height: 1.25;
+    margin: 20px 0;
+    padding: 0;
+  }
+}
+
+@media (min-width: 1440px) {
+  .modal__title {
+    font-size: 32px;
+    line-height: 1.13;
+  }
+
+  .modal__description {
+    line-height: 1.63;
+  }
+}
