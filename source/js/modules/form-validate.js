@@ -70,10 +70,15 @@ function handleTelInput(e) {
 function validateWithPattern(input, errorElement, { pattern, errorMessage }) {
   const isValid = pattern.test(input.value);
 
-  if (!isValid && input.value !== '') {
+  if (!isValid) {
     showError(input, errorElement, errorMessage);
     return false;
-  } else {
+  } 
+  else if (input.value !== '') {
+    validateRequired(input);
+    return false;;
+  }
+  else {
     hideError(input, errorElement);
     return true;
   }
@@ -88,6 +93,17 @@ function validateField(input) {
   } else {
     hideError(input, errorElement);
     return true;
+  }
+
+}
+
+function validateRequired(input) {
+  if (!input.value.trim()) {
+    input.style.borderColor = '#ff5e66';
+    input.style.backgroundColor = 'rgba(255, 94, 102, 0.2)';
+  } else {
+    input.style.borderColor = '';
+    input.style.backgroundColor = '';
   }
 }
 

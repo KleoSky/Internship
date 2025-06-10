@@ -18,3 +18,6 @@ modalOpen();
 
 import { initSelectArrow } from './modules/select';
 initSelectArrow();
+
+import { initSwiperPrograms } from './modules/programs';
+initSwiperPrograms();

@@ -210,7 +210,107 @@
           </li>
         </ul>
       </section>
-      <div data-test="programs">programs</div>
+      <section class="main__programs programs" data-test="programs">
+        <div class="programs__wrapper">
+          <h2 class="programs__title">Программы</h2>
+          <div class="programs__buttons-wrapper">
+            <button class="programs__button programs__button--prev" type="button">
+              <span class="visually-hidden">Показать предыдущую программу</span>
+            </button>
+            <button class="programs__button programs__button--next" type="button">
+              <span class="visually-hidden">Показать следующую программу</span>
+            </button>
+          </div>
+          <div class="programs__swiper swiper">
+            <ul class="programs__list swiper-wrapper">
+              <li class="programs__item programs__item--active program-card swiper-slide">
+                <div class="programs-card__picture">
+                  <picture>
+                    <source media="(min-width: 1440px)" width="392" height="420" type="image/webp"
+                      srcset="img/programs-img-desktop-1@1x.webp 1x, img/programs-img-desktop-1@2x.webp 2x">
+                    <source media="(min-width: 768px)" width="324" height="420" type="image/webp"
+                      srcset="img/programs-img-tablet-1@1x.webp 1x, img/programs-img-tablet-1@2x.webp 2x">
+                    <source width="290" height="400" type="image/webp"
+                      srcset="img/programs-img-mobile-1@1x.webp 1x, img/programs-img-mobile-1@2x.webp 2x">
+                    <source media="(min-width: 1440px)" width="392" height="420" type="image/jpeg"
+                      srcset="img/programs-img-desktop-1@1x.jpg 1x, img/programs-img-desktop-1@2x.jpg 2x">
+                    <source media="(min-width: 768px)" width="324" height="420" type="image/jpeg"
+                      srcset="img/programs-img-tablet-1@1x.jpg 1x, img/programs-img-tablet-1@2x.jpg 2x">
+                    <img src="img/programs-img-mobile-1@1x.jpg" srcset="img/programs-img-mobile-1@2x.jpg 2x" width="290"
+                      height="400" alt="Две девушки за просмотром планшетки с обучающей программой">
+                  </picture>
+                </div>
+                <div class="program-card__content">
+                  <h3 class="program-card__title">Стажировки</h3>
+                  <p>Получите незаменимый опыт
+                    работы в крупнейших мировых
+                    компаниях.</p>
+                    <button class="program-card__button" type="button">
+                      <span class="visually-hidden">Подробнее о программе</span>
+                    </button>
+                </div>
+              </li>
+              <li class="programs__item programs__item--active program-card swiper-slide">
+                <div class="programs-card__picture">
+                  <picture>
+                    <source media="(min-width: 1440px)" width="392" height="420" type="image/webp"
+                      srcset="img/programs-img-desktop-2@1x.webp 1x, img/programs-img-desktop-2@2x.webp 2x">
+                    <source media="(min-width: 768px)" width="324" height="420" type="image/webp"
+                      srcset="img/programs-img-tablet-2@1x.webp 1x, img/programs-img-tablet-2@2x.webp 2x">
+                    <source width="290" height="400" type="image/webp"
+                      srcset="img/programs-img-mobile-2@1x.webp 1x, img/programs-img-mobile-2@2x.webp 2x">
+                    <source media="(min-width: 1440px)" width="392" height="420" type="image/jpeg"
+                      srcset="img/programs-img-desktop-2@1x.jpg 1x, img/programs-img-desktop-2@2x.jpg 2x">
+                    <source media="(min-width: 768px)" width="324" height="420" type="image/jpeg"
+                      srcset="img/programs-img-tablet-2@1x.jpg 1x, img/programs-img-tablet-2@2x.jpg 2x">
+                    <img src="img/programs-img-mobile-2@1x.jpg" srcset="img/programs-img-mobile-2@2x.jpg 2x" width="290"
+                      height="400" alt="Смуглый парень в футболке с надписью Волонтёр">
+                  </picture>
+                </div>
+                <div class="program-card__content">
+                  <h3 class="program-card__title">Волонтёрство</h3>
+                  <p>Помогайте другим
+                    и развивайте свои
+                    лидерские качества</p>
+                    <button class="program-card__button" type="button">
+                      <span class="visually-hidden">Подробнее о программе</span>
+                    </button>
+                </div>
+              </li>
+              <li class="programs__item programs__item--active program-card swiper-slide">
+                <div class="programs-card__picture">
+                  <picture>
+                    <source media="(min-width: 1440px)" width="392" height="420" type="image/webp"
+                      srcset="img/programs-img-desktop-3@1x.webp 1x, img/programs-img-desktop-3@2x.webp 2x">
+                    <source media="(min-width: 768px)" width="324" height="420" type="image/webp"
+                      srcset="img/programs-img-tablet-3@1x.webp 1x, img/programs-img-tablet-3@2x.webp 2x">
+                    <source width="290" height="400" type="image/webp"
+                      srcset="img/programs-img-mobile-3@1x.webp 1x, img/programs-img-mobile-3@2x.webp 2x">
+                    <source media="(min-width: 1440px)" width="392" height="420" type="image/jpeg"
+                      srcset="img/programs-img-desktop-3@1x.jpg 1x, img/programs-img-desktop-3@2x.jpg 2x">
+                    <source media="(min-width: 768px)" width="324" height="420" type="image/jpeg"
+                      srcset="img/programs-img-tablet-3@1x.jpg 1x, img/programs-img-tablet-3@2x.jpg 2x">
+                    <img src="img/programs-img-mobile-3@1x.jpg" srcset="img/programs-img-mobile-3@2x.jpg 2x" width="290"
+                      height="400" alt="Студент в очках учится за столом, обложившись книгами">
+                  </picture>
+                </div>
+                <div class="program-card__content">
+                  <h3 class="program-card__title">Учёба</h3>
+                  <p>Получите образование и измените
+                    своё будущее.</p>
+                    <button class="program-card__button" type="button">
+                      <span class="visually-hidden">Подробнее о программе</span>
+                    </button>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="programs__scrollbar swiper-scrollbar">
+            <span class="visually-hidden">Скроллбар для переключения слайдов с доступными программами</span>
+          </div>
+          <a class="programs__link main-button" href="#">Все программы</a>
+        </div>
+      </section>
       <div data-test="grant">grant</div>
       <div data-test="news">news</div>
       <div data-test="FAQ">FAQ</div>
@@ -227,7 +327,8 @@
       <p class="modal__description">Оставьте ваши контакты, если у вас остались вопросы – мы на них ответим!</p>
       <form class="modal__form modal-form" action="https://echo.htmlacademy.ru/" method="post">
         <label class="modal-form__label" for="name">Имя</label>
-        <input class="modal-form__name-input" type="text" name="name-input" id="name" pattern="[A-Za-zA-Яа-яЁё\s]+" required>
+        <input class="modal-form__name-input" type="text" name="name-input" id="name" pattern="[A-Za-zA-Яа-яЁё\s]+"
+          required>
         <label class="modal-form__label" for="tel">Телефон</label>
         <input class="modal-form__tel-input" type="tel" name="tel-input" id="tel" pattern="^[0-9]+{10}" required>
         <label class="modal-form__label" for="city">Выберите город</label>
@@ -242,7 +343,8 @@
           <option class="modal-form__option" value="kaliningrad">Калининград</option>
         </select>
         <div class="modal-form__agreement">
-          <label class="modal-form__label-agree" for="agreement">Я согласен на обработку моих персональных данных</label>
+          <label class="modal-form__label-agree" for="agreement">Я согласен на обработку моих персональных
+            данных</label>
           <input class="modal-form__input-agree" type="checkbox" name="agree" id="agreement" required>
         </div>
         <button class="modal-form__button main-button" type="submit">Отправить</button>
