@@ -14,7 +14,14 @@ const menuClose = () => {
   navList.classList.add('nav__list--closed');
   body.classList.remove('body-overlay');
 
+  document.removeEventListener('keydown', handleEscapeKey);
   document.removeEventListener('click', handleOutsideClick);
+};
+
+const handleEscapeKey = (event) => {
+  if (event.key === 'Escape') {
+    menuClose();
+  }
 };
 
 // Проверка клика вне навигации
@@ -44,6 +51,7 @@ const menuOpen = () => {
       navList.classList.add('nav__list--opened');
       body.classList.add('body-overlay');
 
+      document.addEventListener('keydown', handleEscapeKey);
       document.addEventListener('click', handleOutsideClick);
     }
   });

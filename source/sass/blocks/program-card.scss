@@ -1,0 +1,195 @@
+.programs-card__picture {
+    min-width: 290px;
+    min-height: 400px;
+    line-height: 1;
+    position: relative;
+
+    &::before {
+        content: "";
+        width: 100%;
+        height: 100%;
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: var(--overlay-photo, rgba(49, 109, 194, 0.2));
+        border-radius: 12px;
+    }
+}
+
+.programs-card__picture img {
+    border-radius: 12px;
+    grid-column: 1 / -1;
+    grid-row: 1 / -1;
+}
+
+.program-card__content {
+    display: grid;
+    grid-template-columns: 146px auto auto;
+    grid-template-rows: repeat(2, min-content);
+    position: relative;
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+}
+
+.program-card__title {
+    width: 146px;
+    font-size: 16px;
+    line-height: 1.13;
+    font-weight: 400;
+    color: var(--bg-accent, #000080);
+    margin: 0;
+    padding: 18px 18px 6px;
+    background-color: var(--bg-second, #ffffff);
+    box-sizing: border-box;
+    border-top-right-radius: 12px;
+    border-top-left-radius: 12px;
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+
+    &::after {
+        content: "";
+        width: 18px;
+        height: 18px;
+        display: block;
+        background-color: var(--bg-second, #ffffff);
+        position: absolute;
+        mask: url("/__spritemap#sprite-corner-icon-view") center / 18px 18px no-repeat;
+        top: 25px;
+        left: 146px;
+        transform: rotate(-90deg);
+    }
+}
+
+.program-card__content p {
+    width: 270px;
+    min-height: 69px;
+    font-size: 12px;
+    line-height: 1.17;
+    margin: 0;
+    padding: 12px 55px 15px 18px;
+    background-color: var(--bg-second, #ffffff);
+    box-sizing: border-box;
+    border-top-right-radius: 12px;
+    border-bottom-right-radius: 12px;
+    border-bottom-left-radius: 12px;
+    grid-column: 1 / -1;
+    grid-row: 2 / 3;
+}
+
+.program-card__button {
+    width: 30px;
+    height: 30px;
+    border-color: transparent;
+    border-radius: 50%;
+    background-color: var(--bg-accent, #000080);
+    position: absolute;
+    grid-column: 3 / 4;
+    grid-row: 2 / 3;
+    cursor: pointer;
+    top: 48%;
+    transform: translateY(-50%);
+    left: 24%;
+
+    &::after {
+        content: "";
+        width: 7px;
+        height: 7px;
+        display: block;
+        background-color: var(--bg-second, #ffffff);
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        mask: url("/__spritemap#sprite-arrow-45deg-icon-view") center / 7px 7px no-repeat;
+        top: 13px;
+        left: 9px;
+    }
+
+    &:hover:not(:disabled) {
+        background-color: var(--bg-second, #ffffff);
+    }
+
+    &:hover:not(:disabled)::after {
+        background-color: var(--bg-accent, #000080);
+        transform: translateY(-50%) rotate(45deg);
+    }
+
+    &:active:not(:disabled) {
+        background-color: var(--bg-second, #ffffff);
+    }
+
+    &:active:not(:disabled)::after {
+        background-color: rgba(49, 109, 194, 0.7);
+    }
+
+    &:focus:not(:disabled)::after,
+    &:focus-visible:not(:disabled)::after {
+        transform: translateY(-50%) rotate(45deg);
+    }
+}
+
+@media (min-width: 768px) {
+    .programs-card__picture {
+        min-width: 324px;
+        min-height: 420px;
+    }
+
+    .program-card__content {
+        grid-template-columns: 173px auto auto;
+    }
+
+    .program-card__title {
+        width: 173px;
+        font-size: 20px;
+        line-height: 14px;
+
+        &::after {
+            top: 20px;
+            left: 173px;
+        }
+    }
+
+    .program-card__content p {
+        width: 284px;
+        min-height: 87px;
+        font-size: inherit;
+        line-height: inherit;
+        padding: 11px 70px 15px 18px;
+    }
+
+    .program-card__button {
+        left: 14%;
+    }
+}
+
+@media (min-width: 1440px) {
+    .programs-card__picture {
+        min-width: 392px;
+    }
+
+    .program-card__content {
+        grid-template-columns: 194px auto auto;
+    }
+
+    .program-card__title {
+        width: 194px;
+        font-size: 24px;
+        line-height: 17px;
+
+        &::after {
+            top: 23px;
+            left: 194px;
+        }
+    }
+
+    .program-card__content p {
+        width: 321px;
+        min-height: 82px;
+        line-height: 1.23;
+        padding: 12px 70px 15px 18px;
+    }
+
+    .program-card__button {
+        left: 25%;
+    }
+}
