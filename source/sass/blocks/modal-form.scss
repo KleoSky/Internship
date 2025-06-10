@@ -65,6 +65,18 @@
   border-radius: 2px;
   background-color: var(--bg-accent, #000080);
   cursor: pointer;
+
+  &:hover:not(:disabled):not(:checked),
+  &:focus:not(:disabled):not(:checked) {
+    background-color: rgba(49, 109, 194, 0.8);
+    border: 1px solid transparent;
+  }
+
+  &:disabled {
+    background-color: var(--bg-button-dis, #484848);
+    border: 1px solid transparent;
+    cursor: default;
+  }
 }
 
 .modal-form__input-agree:checked {
@@ -74,6 +86,7 @@
   background-repeat: no-repeat;
   background-position: 50% 50%;
   border: 1px solid var(--color-second, #ffffff);
+  cursor: default;
 }
 
 .modal-form__button {
@@ -102,6 +115,16 @@
   justify-content: center;
   align-items: center;
   cursor: pointer;
+
+  &:hover:not(:disabled),
+  &:focus:not(:disabled) {
+    background-color: rgba(49, 109, 194, 0.7);
+  }
+
+  &:disabled {
+    background-color: var(--bg-button-dis, #484848);
+    cursor: default;
+  }
 }
 
 @media (min-width: 768px) {
