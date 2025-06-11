@@ -1,7 +1,9 @@
 const initSelectArrow = () => {
   const select = document.querySelector('.modal-form__select');
 
-  if (!select) return;
+  if (!select) {
+    return;
+  }
 
   // Скрываем первый пустой option при открытии
   select.addEventListener('mousedown', () => {

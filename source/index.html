@@ -224,7 +224,7 @@
           <div class="programs__swiper swiper">
             <ul class="programs__list swiper-wrapper">
               <li class="programs__item programs__item--active program-card swiper-slide">
-                <div class="programs-card__picture">
+                <div class="program-card__picture">
                   <picture>
                     <source media="(min-width: 1440px)" width="392" height="420" type="image/webp"
                       srcset="img/programs-img-desktop-1@1x.webp 1x, img/programs-img-desktop-1@2x.webp 2x">
@@ -245,13 +245,13 @@
                   <p>Получите незаменимый опыт
                     работы в крупнейших мировых
                     компаниях.</p>
-                    <button class="program-card__button" type="button">
-                      <span class="visually-hidden">Подробнее о программе</span>
-                    </button>
+                  <button class="program-card__button" type="button">
+                    <span class="visually-hidden">Подробнее о программе</span>
+                  </button>
                 </div>
               </li>
               <li class="programs__item programs__item--active program-card swiper-slide">
-                <div class="programs-card__picture">
+                <div class="program-card__picture">
                   <picture>
                     <source media="(min-width: 1440px)" width="392" height="420" type="image/webp"
                       srcset="img/programs-img-desktop-2@1x.webp 1x, img/programs-img-desktop-2@2x.webp 2x">
@@ -272,13 +272,13 @@
                   <p>Помогайте другим
                     и развивайте свои
                     лидерские качества</p>
-                    <button class="program-card__button" type="button">
-                      <span class="visually-hidden">Подробнее о программе</span>
-                    </button>
+                  <button class="program-card__button" type="button">
+                    <span class="visually-hidden">Подробнее о программе</span>
+                  </button>
                 </div>
               </li>
               <li class="programs__item programs__item--active program-card swiper-slide">
-                <div class="programs-card__picture">
+                <div class="program-card__picture">
                   <picture>
                     <source media="(min-width: 1440px)" width="392" height="420" type="image/webp"
                       srcset="img/programs-img-desktop-3@1x.webp 1x, img/programs-img-desktop-3@2x.webp 2x">
@@ -298,9 +298,9 @@
                   <h3 class="program-card__title">Учёба</h3>
                   <p>Получите образование и измените
                     своё будущее.</p>
-                    <button class="program-card__button" type="button">
-                      <span class="visually-hidden">Подробнее о программе</span>
-                    </button>
+                  <button class="program-card__button" type="button">
+                    <span class="visually-hidden">Подробнее о программе</span>
+                  </button>
                 </div>
               </li>
             </ul>
@@ -311,7 +311,42 @@
           <a class="programs__link main-button" href="#">Все программы</a>
         </div>
       </section>
-      <div data-test="grant">grant</div>
+      <section class="main__grant grant" data-test="grant">
+        <div class="grant__wrapper">
+          <h2 class="grant__title">Как поехать</h2>
+          <p>Свяжитесь с координатором, чтобы узнать полную информацию.
+            Вы получите актуальные сведения о доступных программах
+            и городах, в которых можете пройти программу.</p>
+          <div class="grant__picture">
+            <picture>
+              <source media="(min-width: 1440px)" width="498" height="363" type="image/webp"
+                srcset="img/grant-img-desktop@1x.webp 1x, img/grant-img-desktop@2x.webp 2x">
+              <source media="(min-width: 768px)" width="678" height="375" type="image/webp"
+                srcset="img/grant-img-tablet@1x.webp 1x, img/grant-img-tablet@2x.webp 2x">
+              <source width="290" height="200" type="image/webp"
+                srcset="img/grant-img-mobile@1x.webp 1x, img/grant-img-mobile@2x.webp 2x">
+              <source media="(min-width: 1440px)" width="498" height="363" type="image/jpeg"
+                srcset="img/grant-img-desktop@1x.jpg 1x, img/grant-img-desktop@2x.jpg 2x">
+              <source media="(min-width: 768px)" width="678" height="375" type="image/jpeg"
+                srcset="img/grant-img-tablet@1x.jpg 1x, img/grant-img-tablet@2x.jpg 2x">
+              <img src="img/grant-img-mobile@1x.jpg" srcset="img/grant-img-mobile@2x.jpg 2x" width="290" height="200"
+                alt="Столб с указателями в виде цветных стрелок с названиями стран">
+            </picture>
+          </div>
+          <div class="grant__content">
+            <h3 class="grant__content-title">Чтобы получить грант
+              на обучение, вам нужно:</h3>
+            <ul class="grant__content-list">
+              <li class="grant__content-item">Быть в возрасте от 16 до 30 лет</li>
+              <li class="grant__content-item">Иметь оконченное среднее образование</li>
+              <li class="grant__content-item">Иметь документально подтверждённое отсутствие
+                судимости и пройти консульскую проверку</li>
+              <li class="grant__content-item">За последние 2 года быть не больше 3х месяцев
+                подряд непрерывно в одной стране</li>
+            </ul>
+          </div>
+        </div>
+      </section>
       <div data-test="news">news</div>
       <div data-test="FAQ">FAQ</div>
       <div data-test="reviews">reviews</div>
@@ -321,9 +356,9 @@
     <div data-test="footer">footer</div>
   </div>
   <script type="module" src="js/main.js"></script>
-  <div class="body__modal-wrapper body__modal-wrapper--closed">
+  <div class="body__modal-wrapper body__modal-wrapper--closed" tabindex="0">
     <div class="body__modal modal">
-      <h2 class="modal__title" id="Напишите нам">Напишите нам</h2>
+      <h2 class="modal__title" id="write">Напишите нам</h2>
       <p class="modal__description">Оставьте ваши контакты, если у вас остались вопросы – мы на них ответим!</p>
       <form class="modal__form modal-form" action="https://echo.htmlacademy.ru/" method="post">
         <label class="modal-form__label" for="name">Имя</label>
@@ -333,7 +368,7 @@
         <input class="modal-form__tel-input" type="tel" name="tel-input" id="tel" pattern="^[0-9]+{10}" required>
         <label class="modal-form__label" for="city">Выберите город</label>
         <select class="modal-form__select modal-form__select--closed" name="city-choice" id="city" required>
-          <option class="modal-form__option" value=""></option>
+          <option class="modal-form__option" value="">&nbsp;</option>
           <option class="modal-form__option" value="moscow">Москва</option>
           <option class="modal-form__option" value="petersburg">Санкт-Петербург</option>
           <option class="modal-form__option" value="novosibirsk">Новосибирск</option>
@@ -349,11 +384,10 @@
         </div>
         <button class="modal-form__button main-button" type="submit">Отправить</button>
       </form>
-      <button class="modal-form__button-close" type="button">
+      <button class="modal__button-close" type="button">
         <span class="visually-hidden">Закрыть форму</span>
       </button>
     </div>
   </div>
 </body>
-
 </html>
