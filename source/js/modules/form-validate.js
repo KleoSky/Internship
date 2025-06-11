@@ -5,7 +5,7 @@ const FIELDS = {
   },
   'tel-input': {
     pattern: /^\+7\d{10}$/,
-    errorMessage: 'Только цифры без пробелов (формат: +7XXX...)'
+    errorMessage: 'Только 10 цифр без пробелов (формат: +7XXX...)'
   }
 };
 
@@ -68,17 +68,18 @@ function handleTelInput(e) {
 }
 
 function validateWithPattern(input, errorElement, { pattern, errorMessage }) {
+  if (input.value === '') {
+    input.style.borderColor = '#ff5e66';
+    input.style.backgroundColor = 'rgba(255, 94, 102, 0.2)';
+    errorElement.textContent = '';
+    return false;
+  }
   const isValid = pattern.test(input.value);
 
   if (!isValid) {
     showError(input, errorElement, errorMessage);
     return false;
-  } 
-  else if (input.value !== '') {
-    validateRequired(input);
-    return false;;
-  }
-  else {
+  } else {
     hideError(input, errorElement);
     return true;
   }
@@ -91,19 +92,20 @@ function validateField(input) {
   if (FIELDS[fieldName]) {
     return validateWithPattern(input, errorElement, FIELDS[fieldName]);
   } else {
-    hideError(input, errorElement);
-    return true;
+    return validateRequired(input);
   }
 
 }
 
 function validateRequired(input) {
-  if (!input.value.trim()) {
+  if (!input.value === '') {
     input.style.borderColor = '#ff5e66';
     input.style.backgroundColor = 'rgba(255, 94, 102, 0.2)';
+    return false;
   } else {
     input.style.borderColor = '';
     input.style.backgroundColor = '';
+    return true;
   }
 }
 
@@ -124,7 +126,7 @@ function getErrorElement(input) {
     return {
       textContent: '',
       style: {}
-    }
+    };
   }
   let errorElement = input.nextElementSibling;
 

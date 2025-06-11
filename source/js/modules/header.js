@@ -18,11 +18,11 @@ const menuClose = () => {
   document.removeEventListener('click', handleOutsideClick);
 };
 
-const handleEscapeKey = (event) => {
+function handleEscapeKey(event) {
   if (event.key === 'Escape') {
     menuClose();
   }
-};
+}
 
 // Проверка клика вне навигации
 function handleOutsideClick(event) {

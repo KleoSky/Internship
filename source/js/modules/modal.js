@@ -1,5 +1,5 @@
 const aboutButton = document.querySelector('.about__button');
-const closeButton = document.querySelector('.modal-form__button-close');
+const closeButton = document.querySelector('.modal__button-close');
 const modal = document.querySelector('.body__modal-wrapper');
 
 // Закрытие модального окна
@@ -12,20 +12,20 @@ const modalClose = () => {
 };
 
 // Обработчик нажатия ESC
-const handleEscapeKey = (event) => {
+function handleEscapeKey(event) {
   if (event.key === 'Escape') {
     modalClose();
   }
-};
+}
 
 // Обработчик клика вне модального окна
-const handleOutsideClick = (event) => {
+function handleOutsideClick(event) {
   if (modal.classList.contains('body__modal-wrapper--opened') &&
       !event.target.closest('.body__modal') &&
       !event.target.closest('.about__button')) {
     modalClose();
   }
-};
+}
 
 // Открытие модального окна
 const modalOpen = () => {
@@ -46,7 +46,7 @@ const modalOpen = () => {
 };
 
 closeButton.addEventListener('click', () => {
-    modalClose();
-})
+  modalClose();
+});
 
 export {modalOpen};

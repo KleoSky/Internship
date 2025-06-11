@@ -1,32 +1,58 @@
 .modal {
-    width: 290px;
-    color: var(--color-base, #000000);
-    position: relative;
-    margin: auto;
-    padding: 40px 15px;
-    background-color: var(--bg-second, #ffffff);
-    border: none;
-    border-radius: 16px;
-    box-sizing: border-box;
+  width: 290px;
+  color: var(--color-base, #000000);
+  position: relative;
+  margin: auto;
+  padding: 40px 15px;
+  background-color: var(--bg-second, #ffffff);
+  border: none;
+  border-radius: 16px;
+  box-sizing: border-box;
 }
 
 .modal__title {
-    font-size: 18px;
-    line-height: 1;
-    font-weight: 400;
-    color: var(--bg-accent, #000080);
-    margin: 0;
-    margin-bottom: 15px;
-    text-align: center;
+  font-size: 18px;
+  line-height: 1;
+  font-weight: 400;
+  color: var(--bg-accent, #000080);
+  margin: 0;
+  margin-bottom: 15px;
+  text-align: center;
 }
 
 .modal__description {
-    text-align: center;
-    margin: 15px 0;
-    padding: 0 15px;
+  text-align: center;
+  margin: 15px 0;
+  padding: 0 15px;
 }
 
-@media (min-width: 768px) {
+.modal__button-close {
+  position: absolute;
+  padding: 0;
+  top: 20px;
+  right: 20px;
+  width: 16px;
+  height: 16px;
+  background-color: var(--bg-accent, #000080);
+  mask: url("/__spritemap#sprite-cross-icon-view") center / 16px 16px no-repeat;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+
+  &:hover:not(:disabled),
+  &:focus:not(:disabled) {
+    background-color: rgba(49, 109, 194, 0.7);
+  }
+
+  &:disabled {
+    background-color: var(--bg-button-dis, #484848);
+    cursor: default;
+  }
+}
+
+@media (width >= 768px) {
   .modal {
     width: 510px;
     padding: 60px 80px;
@@ -43,9 +69,17 @@
     margin: 20px 0;
     padding: 0;
   }
+
+  .modal__button-close {
+    top: 30px;
+    right: 30px;
+    width: 22px;
+    height: 22px;
+    mask: url("/__spritemap#sprite-cross-icon-view") center / 18px 18px no-repeat;
+  }
 }
 
-@media (min-width: 1440px) {
+@media (width >= 1440px) {
   .modal__title {
     font-size: 32px;
     line-height: 1.13;
