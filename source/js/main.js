@@ -24,3 +24,6 @@ initSwiperPrograms();
 
 import { initSwiperNews } from './modules/news';
 initSwiperNews();
+
+import { switchFaqTab } from './modules/faq';
+switchFaqTab();
