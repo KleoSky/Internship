@@ -245,7 +245,7 @@
                   <p>Получите незаменимый опыт
                     работы в крупнейших мировых
                     компаниях.</p>
-                  <button class="program-card__button" type="button">
+                  <button class="program-card__button card-button" type="button">
                     <span class="visually-hidden">Подробнее о программе</span>
                   </button>
                 </div>
@@ -272,7 +272,7 @@
                   <p>Помогайте другим
                     и развивайте свои
                     лидерские качества</p>
-                  <button class="program-card__button" type="button">
+                  <button class="program-card__button card-button" type="button">
                     <span class="visually-hidden">Подробнее о программе</span>
                   </button>
                 </div>
@@ -298,7 +298,7 @@
                   <h3 class="program-card__title">Учёба</h3>
                   <p>Получите образование и измените
                     своё будущее.</p>
-                  <button class="program-card__button" type="button">
+                  <button class="program-card__button card-button" type="button">
                     <span class="visually-hidden">Подробнее о программе</span>
                   </button>
                 </div>
@@ -347,7 +347,343 @@
           </div>
         </div>
       </section>
-      <div data-test="news">news</div>
+      <section class="main__news news" data-test="news">
+        <div class="news__wrapper-main">
+          <h2 class="news__title">Новости и материалы</h2>
+          <ul class="news__tab-list">
+            <li class="news__tab-item news__tab-item--current" rel="tab-1">
+              <button class="news__tab-button news__tab-button--current" rel="tab-1">Общее</button>
+            </li>
+            <li class="news__tab-item" rel="tab-2">
+              <button class="news__tab-button" type="button" rel="tab-2">Волонтёрство</button>
+            </li>
+            <li class="news__tab-item" rel="tab-3">
+              <button class="news__tab-button" type="button" rel="tab-3">Стажировки</button>
+            </li>
+            <li class="news__tab-item" rel="tab-4">
+              <button class="news__tab-button" type="button" rel="tab-4">Карьера</button>
+            </li>
+            <li class="news__tab-item" rel="tab-5">
+              <button class="news__tab-button" type="button" rel="tab-5">Путешествия</button>
+            </li>
+          </ul>
+          <div class="news__wrapper-second swiper">
+            <ul class="news__list swiper-wrapper" rel="tab-1">
+              <li class="news__item news__item--active swiper-slide" rel="tab-3">
+                <div class="news__item-wrapper news__item-wrapper--big">
+                  <div class="news__pictures-wrapper">
+                    <div class="news__picture">
+                      <picture>
+                        <source media="(min-width: 1440px)" width="286" height="400" type="image/webp"
+                          srcset="img/news-img-desktop-1@1x.webp 1x, img/news-img-desktop-1@2x.webp 2x">
+                        <source media="(min-width: 768px)" width="324" height="350" type="image/webp"
+                          srcset="img/news-img-tablet-1@1x.webp 1x, img/news-img-tablet-1@2x.webp 2x">
+                        <source width="290" height="330" type="image/webp"
+                          srcset="img/news-img-mobile-1@1x.webp 1x, img/news-img-mobile-1@2x.webp 2x">
+                        <source media="(min-width: 1440px)" width="286" height="400" type="image/jpeg"
+                          srcset="img/news-img-desktop-1@1x.jpg 1x, img/news-img-desktop-1@2x.jpg 2x">
+                        <source media="(min-width: 768px)" width="324" height="350" type="image/jpeg"
+                          srcset="img/news-img-tablet-1@1x.jpg 1x, img/news-img-tablet-1@2x.jpg 2x">
+                        <img src="img/news-img-mobile-1@1x.jpg" srcset="img/news-img-mobile-1@2x.jpg 2x" width="290"
+                          height="330" alt="Студентка даёт интервью">
+                      </picture>
+                    </div>
+                    <div class="news__picture-big">
+                      <picture>
+                        <source media="(min-width: 1440px)" width="604" height="400" type="image/webp"
+                          srcset="img/news-img-big-1@1x.webp 1x, img/news-img-big-1@2x.webp 2x">
+                        <img src="img/news-img-big-1@1x.jpg" srcset="img/news-img-big-1@2x.jpg 2x" width="604"
+                          height="400" alt="Студентка даёт интервью">
+                      </picture>
+                    </div>
+                  </div>
+                  <div class="news__content news__content--big">
+                    <h3 class="news__content-title">Интервью с участницей программы
+                      стажировки</h3>
+                    <time class="news__content-date" datetime="2023-03-23">23/03/2023</time>
+                    <p>Саша рассказывает, как попала в программу и как прошла 6-месячная стажировка в ISOFound</p>
+                    <button class="news__content-button card-button" type="button">
+                      <span class="visually-hidden">Открыть подробности</span>
+                    </button>
+                  </div>
+                </div>
+                <div class="news__item-wrapper">
+                    <div class="news__pictures-wrapper">
+                      <div class="news__picture">
+                        <picture>
+                          <source media="(min-width: 1440px)" width="286" height="400" type="image/webp"
+                            srcset="img/news-img-desktop-2@1x.webp 1x, img/news-img-desktop-2@2x.webp 2x">
+                          <source media="(min-width: 768px)" width="324" height="350" type="image/webp"
+                            srcset="img/news-img-tablet-2@1x.webp 1x, img/news-img-tablet-2@2x.webp 2x">
+                          <source width="290" height="240" type="image/webp"
+                            srcset="img/news-img-mobile-2@1x.webp 1x, img/news-img-mobile-2@2x.webp 2x">
+                          <source media="(min-width: 1440px)" width="286" height="400" type="image/jpeg"
+                            srcset="img/news-img-desktop-2@1x.jpg 1x, img/news-img-desktop-2@2x.jpg 2x">
+                          <source media="(min-width: 768px)" width="324" height="350" type="image/jpeg"
+                            srcset="img/news-img-tablet-2@1x.jpg 1x, img/news-img-tablet-2@2x.jpg 2x">
+                          <img src="img/news-img-mobile-2@1x.jpg" srcset="img/news-img-mobile-2@2x.jpg 2x" width="290"
+                            height="240" alt="Побережье Тель-Авива. Израиль">
+                        </picture>
+                      </div>
+                    </div>
+                    <div class="news__content">
+                      <h3 class="news__content-title">Путешествуем по миру</h3>
+                      <time class="news__content-date" datetime="2023-03-20">20/03/2023</time>
+                      <p>Какие места посещают наши
+                        студенты весной</p>
+                      <button class="news__content-button card-button" type="button">
+                        <span class="visually-hidden">Открыть подробности</span>
+                      </button>
+                    </div>
+                </div>
+              </li>
+              <li class="news__item swiper-slide" rel="tab-2">
+                <div class="news__item-wrapper">
+                  <div class="news__pictures-wrapper">
+                    <div class="news__picture">
+                      <picture>
+                        <source media="(min-width: 1440px)" width="286" height="400" type="image/webp"
+                          srcset="img/news-img-desktop-3@1x.webp 1x, img/news-img-desktop-3@2x.webp 2x">
+                        <source media="(min-width: 768px)" width="324" height="350" type="image/webp"
+                          srcset="img/news-img-tablet-3@1x.webp 1x, img/news-img-tablet-3@2x.webp 2x">
+                        <source width="290" height="330" type="image/webp"
+                          srcset="img/news-img-mobile-3@1x.webp 1x, img/news-img-mobile-3@2x.webp 2x">
+                        <source media="(min-width: 1440px)" width="286" height="400" type="image/jpeg"
+                          srcset="img/news-img-desktop-3@1x.jpg 1x, img/news-img-desktop-3@2x.jpg 2x">
+                        <source media="(min-width: 768px)" width="324" height="350" type="image/jpeg"
+                          srcset="img/news-img-tablet-3@1x.jpg 1x, img/news-img-tablet-3@2x.jpg 2x">
+                        <img src="img/news-img-mobile-3@1x.jpg" srcset="img/news-img-mobile-3@2x.jpg 2x" width="290"
+                          height="330" alt="Руки девушки в красной кофточке со значком Волонтёр крупным планом">
+                      </picture>
+                    </div>
+                    <div class="news__picture-big">
+                      <picture>
+                        <source media="(min-width: 1440px)" width="604" height="400" type="image/webp"
+                          srcset="img/news-img-big-3@1x.webp 1x, img/news-img-big-3@2x.webp 2x">
+                        <img src="img/news-img-big-3@1x.jpg" srcset="img/news-img-big-3@2x.jpg 2x" width="604"
+                          height="400" alt="Руки девушки в красной кофточке со значком Волонтёр крупным планом">
+                      </picture>
+                    </div>
+                  </div>
+                  <div class="news__content">
+                    <h3 class="news__content-title">Новая программа
+                      волонтёрства</h3>
+                    <time class="news__content-date" datetime="2023-03-17">17/03/2023</time>
+                    <p>Программа помощи детям
+                      длительностью 4 месяца</p>
+                    <button class="news__content-button card-button" type="button">
+                      <span class="visually-hidden">Открыть подробности</span>
+                    </button>
+                  </div>
+                </div>
+                <div class="news__item-wrapper">
+                  <div class="news__pictures-wrapper">
+                    <div class="news__picture">
+                      <picture>
+                        <source media="(min-width: 1440px)" width="286" height="400" type="image/webp"
+                          srcset="img/news-img-desktop-4@1x.webp 1x, img/news-img-desktop-4@2x.webp 2x">
+                        <source media="(min-width: 768px)" width="324" height="350" type="image/webp"
+                          srcset="img/news-img-tablet-4@1x.webp 1x, img/news-img-tablet-4@2x.webp 2x">
+                        <source width="290" height="240" type="image/webp"
+                          srcset="img/news-img-mobile-4@1x.webp 1x, img/news-img-mobile-4@2x.webp 2x">
+                        <source media="(min-width: 1440px)" width="286" height="400" type="image/jpeg"
+                          srcset="img/news-img-desktop-4@1x.jpg 1x, img/news-img-desktop-4@2x.jpg 2x">
+                        <source media="(min-width: 768px)" width="324" height="350" type="image/jpeg"
+                          srcset="img/news-img-tablet-4@1x.jpg 1x, img/news-img-tablet-4@2x.jpg 2x">
+                        <img src="img/news-img-mobile-4@1x.jpg" srcset="img/news-img-mobile-4@2x.jpg 2x" width="290"
+                          height="240"
+                          alt="Стол с пятью ноутбуками и несколькими жёсткими дисками. Руки двоих мужчин за ноутбуками. Вид сверху">
+                      </picture>
+                    </div>
+                  </div>
+                  <div class="news__content">
+                    <h3 class="news__content-title">Построй свою
+                      карьеру</h3>
+                    <time class="news__content-date" datetime="2023-03-10">10/03/2023</time>
+                    <p>Ведущие компании
+                      готовы трудоустроить
+                      выпускников стажировки</p>
+                    <button class="news__content-button card-button" type="button">
+                      <span class="visually-hidden">Открыть подробности</span>
+                    </button>
+                  </div>
+                </div>
+              </li>
+              <li class="news__item swiper-slide" rel="tab-3">
+                <div class="news__item-wrapper">
+                  <div class="news__pictures-wrapper">
+                    <div class="news__picture">
+                      <picture>
+                        <source media="(min-width: 1440px)" width="286" height="400" type="image/webp"
+                          srcset="img/news-img-desktop-1@1x.webp 1x, img/news-img-desktop-1@2x.webp 2x">
+                        <source media="(min-width: 768px)" width="324" height="350" type="image/webp"
+                          srcset="img/news-img-tablet-1@1x.webp 1x, img/news-img-tablet-1@2x.webp 2x">
+                        <source width="290" height="330" type="image/webp"
+                          srcset="img/news-img-mobile-1@1x.webp 1x, img/news-img-mobile-1@2x.webp 2x">
+                        <source media="(min-width: 1440px)" width="286" height="400" type="image/jpeg"
+                          srcset="img/news-img-desktop-1@1x.jpg 1x, img/news-img-desktop-1@2x.jpg 2x">
+                        <source media="(min-width: 768px)" width="324" height="350" type="image/jpeg"
+                          srcset="img/news-img-tablet-1@1x.jpg 1x, img/news-img-tablet-1@2x.jpg 2x">
+                        <img src="img/news-img-mobile-1@1x.jpg" srcset="img/news-img-mobile-1@2x.jpg 2x" width="290"
+                          height="330" alt="Студентка даёт интервью">
+                      </picture>
+                    </div>
+                    <div class="news__picture-big">
+                      <picture>
+                        <source media="(min-width: 1440px)" width="604" height="400" type="image/webp"
+                          srcset="img/news-img-big-1@1x.webp 1x, img/news-img-big-1@2x.webp 2x">
+                        <img src="img/news-img-big-1@1x.jpg" srcset="img/news-img-big-1@2x.jpg 2x" width="604"
+                          height="400" alt="Студентка даёт интервью">
+                      </picture>
+                    </div>
+                  </div>
+                  <div class="news__content">
+                    <h3 class="news__content-title">Интервью с участницей программы
+                      стажировки</h3>
+                    <time class="news__content-date" datetime="2023-03-23">23/03/2023</time>
+                    <p>Саша рассказывает, как попала в программу и как прошла 6-
+                      месячная стажировка в ISOFound</p>
+                    <button class="news__content-button card-button" type="button">
+                      <span class="visually-hidden">Открыть подробности</span>
+                    </button>
+                  </div>
+                </div>
+                <div class="news__item-wrapper">
+                    <div class="news__pictures-wrapper">
+                      <div class="news__picture">
+                        <picture>
+                          <source media="(min-width: 1440px)" width="286" height="400" type="image/webp"
+                            srcset="img/news-img-desktop-2@1x.webp 1x, img/news-img-desktop-2@2x.webp 2x">
+                          <source media="(min-width: 768px)" width="324" height="350" type="image/webp"
+                            srcset="img/news-img-tablet-2@1x.webp 1x, img/news-img-tablet-2@2x.webp 2x">
+                          <source width="290" height="240" type="image/webp"
+                            srcset="img/news-img-mobile-2@1x.webp 1x, img/news-img-mobile-2@2x.webp 2x">
+                          <source media="(min-width: 1440px)" width="286" height="400" type="image/jpeg"
+                            srcset="img/news-img-desktop-2@1x.jpg 1x, img/news-img-desktop-2@2x.jpg 2x">
+                          <source media="(min-width: 768px)" width="324" height="350" type="image/jpeg"
+                            srcset="img/news-img-tablet-2@1x.jpg 1x, img/news-img-tablet-2@2x.jpg 2x">
+                          <img src="img/news-img-mobile-2@1x.jpg" srcset="img/news-img-mobile-2@2x.jpg 2x" width="290"
+                            height="240" alt="Побережье Тель-Авива. Израиль">
+                        </picture>
+                      </div>
+                    </div>
+                    <div class="news__content">
+                      <h3 class="news__content-title">Путешествуем по миру</h3>
+                      <time class="news__content-date" datetime="2023-03-20">20/03/2023</time>
+                      <p>Какие места посещают наши
+                        студенты весной</p>
+                      <button class="news__content-button card-button" type="button">
+                        <span class="visually-hidden">Открыть подробности</span>
+                      </button>
+                    </div>
+                </div>
+              </li>
+              <li class="news__item swiper-slide" rel="tab-2">
+                <div class="news__item-wrapper">
+                  <div class="news__pictures-wrapper">
+                    <div class="news__picture">
+                      <picture>
+                        <source media="(min-width: 1440px)" width="286" height="400" type="image/webp"
+                          srcset="img/news-img-desktop-3@1x.webp 1x, img/news-img-desktop-3@2x.webp 2x">
+                        <source media="(min-width: 768px)" width="324" height="350" type="image/webp"
+                          srcset="img/news-img-tablet-3@1x.webp 1x, img/news-img-tablet-3@2x.webp 2x">
+                        <source width="290" height="330" type="image/webp"
+                          srcset="img/news-img-mobile-3@1x.webp 1x, img/news-img-mobile-3@2x.webp 2x">
+                        <source media="(min-width: 1440px)" width="286" height="400" type="image/jpeg"
+                          srcset="img/news-img-desktop-3@1x.jpg 1x, img/news-img-desktop-3@2x.jpg 2x">
+                        <source media="(min-width: 768px)" width="324" height="350" type="image/jpeg"
+                          srcset="img/news-img-tablet-3@1x.jpg 1x, img/news-img-tablet-3@2x.jpg 2x">
+                        <img src="img/news-img-mobile-3@1x.jpg" srcset="img/news-img-mobile-3@2x.jpg 2x" width="290"
+                          height="330" alt="Руки девушки в красной кофточке со значком Волонтёр крупным планом">
+                      </picture>
+                    </div>
+                    <div class="news__picture-big">
+                      <picture>
+                        <source media="(min-width: 1440px)" width="604" height="400" type="image/webp"
+                          srcset="img/news-img-big-3@1x.webp 1x, img/news-img-big-3@2x.webp 2x">
+                        <img src="img/news-img-big-3@1x.jpg" srcset="img/news-img-big-3@2x.jpg 2x" width="604"
+                          height="400" alt="Руки девушки в красной кофточке со значком Волонтёр крупным планом">
+                      </picture>
+                    </div>
+                  </div>
+                  <div class="news__content">
+                    <h3 class="news__content-title">Новая программа
+                      волонтёрства</h3>
+                    <time class="news__content-date" datetime="2023-03-17">17/03/2023</time>
+                    <p>Программа помощи детям
+                      длительностью 4 месяца</p>
+                    <button class="news__content-button card-button" type="button">
+                      <span class="visually-hidden">Открыть подробности</span>
+                    </button>
+                  </div>
+                </div>
+                <div class="news__item-wrapper">
+                  <div class="news__pictures-wrapper">
+                    <div class="news__picture">
+                      <picture>
+                        <source media="(min-width: 1440px)" width="286" height="400" type="image/webp"
+                          srcset="img/news-img-desktop-4@1x.webp 1x, img/news-img-desktop-4@2x.webp 2x">
+                        <source media="(min-width: 768px)" width="324" height="350" type="image/webp"
+                          srcset="img/news-img-tablet-4@1x.webp 1x, img/news-img-tablet-4@2x.webp 2x">
+                        <source width="290" height="240" type="image/webp"
+                          srcset="img/news-img-mobile-4@1x.webp 1x, img/news-img-mobile-4@2x.webp 2x">
+                        <source media="(min-width: 1440px)" width="286" height="400" type="image/jpeg"
+                          srcset="img/news-img-desktop-4@1x.jpg 1x, img/news-img-desktop-4@2x.jpg 2x">
+                        <source media="(min-width: 768px)" width="324" height="350" type="image/jpeg"
+                          srcset="img/news-img-tablet-4@1x.jpg 1x, img/news-img-tablet-4@2x.jpg 2x">
+                        <img src="img/news-img-mobile-4@1x.jpg" srcset="img/news-img-mobile-4@2x.jpg 2x" width="290"
+                          height="240"
+                          alt="Стол с пятью ноутбуками и несколькими жёсткими дисками. Руки двоих мужчин за ноутбуками. Вид сверху">
+                      </picture>
+                    </div>
+                  </div>
+                  <div class="news__content">
+                    <h3 class="news__content-title">Построй свою
+                      карьеру</h3>
+                    <time class="news__content-date" datetime="2023-03-10">10/03/2023</time>
+                    <p>Ведущие компании
+                      готовы трудоустроить
+                      выпускников стажировки</p>
+                    <button class="news__content-button card-button" type="button">
+                      <span class="visually-hidden">Открыть подробности</span>
+                    </button>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="news__pagination-wrapper">
+            <button class="news__pagination-arrow news__pagination-arrow--prev" type="button">
+              <span class="visually-hidden">Показать предыдущую новость</span>
+            </button>
+            <ul class="news__pagination-list swiper-pagination">
+              <li class="news__pagination-item news__pagination-item--current" rel="tab-3">
+                <button class="news__pagination-button news__pagination-button--current" rel="tab-3">
+                  <span class="visually-hidden">Новость 1</span>
+                </button>
+              </li>
+              <li class="news__pagination-item" rel="tab-5">
+                <button class="news__pagination-button" rel="tab-5">
+                  <span class="visually-hidden">Новость 2</span>
+                </button>
+              </li>
+              <li class="news__pagination-item" rel="tab-2">
+                <button class="news__pagination-button" rel="tab-2">
+                  <span class="visually-hidden">Новость 3</span>
+                </button>
+              </li>
+              <li class="news__pagination-item" rel="tab-4">
+                <button class="news__pagination-button" rel="tab-4">
+                  <span class="visually-hidden">Новость 4</span>
+                </button>
+              </li>
+            </ul>
+            <button class="news__pagination-arrow news__pagination-arrow--next" type="button">
+              <span class="visually-hidden">Показать следующую новость</span>
+            </button>
+          </div>
+        </div>
+      </section>
       <div data-test="FAQ">FAQ</div>
       <div data-test="reviews">reviews</div>
       <div data-test="contacts">contacts</div>
@@ -390,4 +726,5 @@
     </div>
   </div>
 </body>
+
 </html>
