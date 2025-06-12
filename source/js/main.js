@@ -22,5 +22,5 @@ initSelectArrow();
 import { initSwiperPrograms } from './modules/programs';
 initSwiperPrograms();
 
-import { initNewsSlider } from './modules/news';
-initNewsSlider();
+import { initSwiperNews } from './modules/news';
+initSwiperNews();
