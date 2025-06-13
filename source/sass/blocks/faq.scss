@@ -21,6 +21,7 @@
 }
 
 .faq__list {
+  width: 290px;
   margin: 0;
   padding: 0;
   list-style: none;
@@ -46,13 +47,14 @@
   }
 }
 
-.faq__item:not(.faq__item--current) {
-  padding-bottom: 0;
+.faq__item--current p {
+  height: auto;
+  padding-bottom: 10px;
 }
 
-// .faq__item:first-child h3 {
-//   width: 200px;
-// }
+.faq__item:not(.faq__item--current) {
+  margin-bottom: 0;
+}
 
 .faq__item-title {
   font-size: 16px;
@@ -68,7 +70,7 @@
   overflow: hidden;
   transition: height 0.3s ease;
   margin: 0;
-  grid-column: 1 / 2;
+  grid-column: 1 / -1;
   grid-row: 2 / 3;
 }
 
