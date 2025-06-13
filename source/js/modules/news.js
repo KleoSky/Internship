@@ -3,7 +3,7 @@ import { Navigation } from 'swiper/modules';
 import 'swiper/css';
 
 const initSwiperNews = () => {
-  const swiper = new SwiperNews('.news__wrapper-second', {
+  new SwiperNews('.news__wrapper-second', {
     loop: false,
     modules: [Navigation],
     navigation: {
@@ -52,17 +52,19 @@ const initSwiperNews = () => {
   }
 
   function updateBigSlideClasses(swiperInstance) {
-    document.querySelectorAll('.news__item-wrapper--big, .news__content--big').forEach(el => {
+    document.querySelectorAll('.news__item-wrapper--big, .news__content--big').forEach((el) => {
       el.classList.remove('news__item-wrapper--big', 'news__content--big');
     });
-    
+
     const activeSlide = swiperInstance.slides[swiperInstance.activeIndex];
     if (activeSlide) {
       const firstWrapper = activeSlide.querySelector('.news__item-wrapper:first-child');
       if (firstWrapper) {
         firstWrapper.classList.add('news__item-wrapper--big');
         const content = firstWrapper.querySelector('.news__content');
-        if (content) content.classList.add('news__content--big');
+        if (content) {
+          content.classList.add('news__content--big');
+        }
       }
     }
   }
