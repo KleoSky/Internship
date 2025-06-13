@@ -24,3 +24,6 @@ initSwiperPrograms();
 
 import { initSwiperNews } from './modules/news';
 initSwiperNews();
+
+import { initAccordion } from './modules/faq';
+initAccordion();
