@@ -684,20 +684,22 @@
           </div>
         </div>
       </section>
-      <section class="main__faq faq" data-test="faq">
+      <section class="main__faq faq" data-test="FAQ">
         <div class="faq__wrapper">
           <h2 class="faq__title">Вопросы и ответы</h2>
           <ul class="faq__list">
             <li class="faq__item" rel="tab-6">
               <h3 class="faq__item-title">Кто организатор? Какие сроки у программы?</h3>
-              <p>Организатором программы является проект «Стажировка» в сотрудничестве с образовательными учреждениями. Сроки программы обмена могут варьироваться от одного семестра до года.</p>
+              <p>Организатором программы является проект «Стажировка» в сотрудничестве с образовательными учреждениями.
+                Сроки программы обмена могут варьироваться от одного семестра до года.</p>
               <button class="faq__button" type="button">
                 <span class="visually-hidden">Открыть описание</span>
               </button>
             </li>
             <li class="faq__item" rel="tab-7">
               <h3 class="faq__item-title">Что такое грант на обучение?</h3>
-              <p>Грант на обучение — это финансовая поддержка, которую предоставляет организатор программы обмена студентами для оплаты учебных расходов.</p>
+              <p>Грант на обучение — это финансовая поддержка, которую предоставляет организатор программы обмена
+                студентами для оплаты учебных расходов.</p>
               <button class="faq__button" type="button">
                 <span class="visually-hidden">Открыть описание</span>
               </button>
@@ -705,7 +707,8 @@
             <li class="faq__item faq__item--current" rel="tab-8">
               <h3 class="faq__item-title">Как определяется стоимость программы?</h3>
               <p>Полная стоимость определяется организаторами в зависимости от направления. В большинстве случаев грант
-                «Стажировка» не покрывает полную стоимость программы, и поэтому предусматривается определённая доля личного
+                «Стажировка» не покрывает полную стоимость программы, и поэтому предусматривается определённая доля
+                личного
                 участия.</p>
               <button class="faq__button faq__button--current" type="button">
                 <span class="visually-hidden">Открыть описание</span>
@@ -714,7 +717,9 @@
             <li class="faq__item" rel="tab-9">
               <h3 class="faq__item-title">Признаётся ли учёба в рамках проекта для дальнейшего
                 обучения?</h3>
-              <p>Студенты, участвующие в проекте, могут использовать полученные знания и навыки в своей будущей профессиональной деятельности или продолжить обучение в высших учебных заведениях. Кроме того, многие университеты и колледжи предоставляют кредиты за участие в программе обмена студентами.</p>
+              <p>Студенты, участвующие в проекте, могут использовать полученные знания и навыки в своей будущей
+                профессиональной деятельности или продолжить обучение в высших учебных заведениях. Кроме того, многие
+                университеты и колледжи предоставляют кредиты за участие в программе обмена студентами.</p>
               <button class="faq__button" type="button">
                 <span class="visually-hidden">Открыть описание</span>
               </button>
@@ -722,7 +727,10 @@
             <li class="faq__item" rel="tab-10">
               <h3 class="faq__item-title">Как выглядит полный процесс регистрации на программу
                 «Стажировка»?</h3>
-              <p>Процесс регистрации на программу обмена включает выбор университета-партнера и программы обмена, общение с координатором программы, заполнение заявления и предоставление необходимых документов, прохождение интервью, оформление визы, жилья и страховки, обучение по безопасности за границей и подписание договора об участии в программе. Подробнее можно узнать позвонив в центр.</p>
+              <p>Процесс регистрации на программу обмена включает выбор университета-партнера и программы обмена,
+                общение с координатором программы, заполнение заявления и предоставление необходимых документов,
+                прохождение интервью, оформление визы, жилья и страховки, обучение по безопасности за границей и
+                подписание договора об участии в программе. Подробнее можно узнать позвонив в центр.</p>
               <button class="faq__button" type="button">
                 <span class="visually-hidden">Открыть описание</span>
               </button>
@@ -730,7 +738,86 @@
           </ul>
         </div>
       </section>
-      <div data-test="reviews">reviews</div>
+      <section class="main__reviews reviews" data-test="reviews">
+        <div class="reviews__wrapper">
+          <h2 class="reviews__title">Отзывы</h2>
+          <div class="reviews__buttons-wrapper">
+            <button class="reviews__button reviews__button--prev" type="button" data-id="reviews-prev">
+              <span class="visually-hidden">Показать предыдущий отзыв</span>
+            </button>
+            <button class="reviews__button reviews__button--next" type="button" data-id="reviews-next">
+              <span class="visually-hidden">Показать следущий отзыв</span>
+            </button>
+          </div>
+          <div class="reviews__swiper swiper" data-id="reviews-swiper">
+            <ul class="reviews__list swiper-wrapper">
+              <li class="reviews__item swiper-slide">
+                <h3 class="reviews__item-title">Я могу с уверенностью сказать, что это был один из самых
+                  незабываемых опытов в жизни!</h3>
+                <div class="reviews__person">
+                  <h4 class="reviews__person-name">Лола Алекс</h4>
+                  <div class="reviews__picture">
+                    <picture>
+                      <source media="(min-width: 768px)" width="90" height="90" type="image/webp"
+                        srcset="img/avatar-1@1x.webp 1x, img/avatar-1@2x.webp 2x">
+                      <source width="60" height="60" type="image/webp"
+                        srcset="img/avatar-mobile-1@1x.webp 1x, img/avatar-mobile-1@2x.webp 2x">
+                      <source media="(min-width: 768px)" width="90" height="90" type="image/jpeg"
+                        srcset="img/avatar-1@1x.jpg 1x, img/avatar-1@2x.jpg 2x">
+                      <img src="img/avatar-mobile-1@1x.jpg" srcset="img/avatar-mobile-1@2x.jpg 2x" width="60"
+                        height="60" alt="Автор отзыва">
+                    </picture>
+                  </div>
+                </div>
+                <div class="reviews__program">
+                  <h4 class="reviews__program-title">Программа</h4>
+                  <p class="reviews__program-description">Masa Art Challenge</p>
+                </div>
+                <div class="reviews__period">
+                  <h4 class="reviews__period-title">Дата</h4>
+                  <p class="reviews__period-description">Осень 2022</p>
+                </div>
+                <blockquote>Я рекомендую программу «Стажировка» всем студентам, желающим получить незабываемые
+                  впечатления. Сочетание путешествий, общения и значимой работы действительно отличает её от других
+                  программ, и я чувствую огромную благодарность за предоставленную мне возможность.</blockquote>
+              </li>
+              <li class="reviews__item swiper-slide">
+                <h3 class="reviews__item-title">Благодаря опыту стажировки я узнал так много нового о себе
+                  и об окружающем мире.</h3>
+                <div class="reviews__person">
+                  <h4 class="reviews__person-name">Давид Иванов</h4>
+                  <div class="reviews__picture">
+                    <picture>
+                      <source media="(min-width: 768px)" width="90" height="90" type="image/webp"
+                        srcset="img/avatar-2@1x.webp 1x, img/avatar-2@2x.webp 2x">
+                      <source width="60" height="60" type="image/webp"
+                        srcset="img/avatar-mobile-2@1x.webp 1x, img/avatar-mobile-2@2x.webp 2x">
+                      <source media="(min-width: 768px)" width="90" height="90" type="image/jpeg"
+                        srcset="img/avatar-2@1x.jpg 1x, img/avatar-2@2x.jpg 2x">
+                      <img src="img/avatar-mobile-2@1x.png" srcset="img/avatar-mobile-2@2x.jpg 2x" width="60"
+                        height="60" alt="Автор отзыва">
+                    </picture>
+                  </div>
+                </div>
+                <div class="reviews__program">
+                  <h4 class="reviews__program-title">Программа</h4>
+                  <p class="reviews__program-description">Volunteer Chance</p>
+                </div>
+                <div class="reviews__period">
+                  <h4 class="reviews__period-title">Дата</h4>
+                  <p class="reviews__period-description">Лето 2022</p>
+                </div>
+                <blockquote>Каждый день был возможностью оказать ощутимое влияние на жизнь других людей. Я бы очень
+                  рекомендовал эту волонтёрскую программу всем, кто ищет значимый и незабываемый опыт. Организация была
+                  на высшем уровне. Для меня было честью быть частью такой удивительной инициативы.</blockquote>
+              </li>
+            </ul>
+          </div>
+          <div class="reviews__scrollbar swiper-scrollbar">
+            <span class="visually-hidden">Скроллбар для переключения слайдов с доступными программами</span>
+          </div>
+        </div>
+      </section>
       <div data-test="contacts">contacts</div>
       <div data-test="form">form</div>
     </main>
