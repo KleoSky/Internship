@@ -264,7 +264,9 @@
   width: 26px;
   height: 26px;
   cursor: pointer;
-  border: transparent;
+  border: 2px solid transparent;
+  border-radius: 50%;
+  box-sizing: border-box;
 
   &::before {
     content: counter(list) " ";
@@ -285,7 +287,33 @@
 
   &--current {
     background-color: var(--bg-accent, #000080);
-    border-radius: 50%;
+    border-color: var(--bg-accent, #000080);
+    cursor: default;
+  }
+
+  &:hover:not(:disabled):not(.news__pagination-button--current) {
+    border-color: var(--bg-accent, #000080);
+  }
+
+  &:hover:not(:disabled):not(.news__pagination-button--current)::before,
+  &:focus:not(:disabled):not(.news__pagination-button--current)::before,
+  &:focus-visible:not(:disabled):not(.news__pagination-button--current)::before {
+    color: var(--bg-accent, #000080);
+  }
+
+  &:focus:not(:disabled):not(.news__pagination-button--current),
+  &:focus-visible:not(:disabled):not(.news__pagination-button--current) {
+    border-color: var(--bg-accent, #000080);
+    background-color: var(--bg-second, #ffffff);
+  }
+
+  &:active:not(:disabled):not(.news__pagination-button--current) {
+    border-color: #275699;
+    background-color: #275699;
+  }
+
+  &:active:not(:disabled):not(.news__pagination-button--current)::before {
+    color: var(--bg-second, #ffffff);
   }
 }
 
@@ -600,5 +628,9 @@
 
   .news__pagination-wrapper {
     margin-top: 40px;
+  }
+
+  .news__pagination-button::before {
+    left: -2px;
   }
 }
