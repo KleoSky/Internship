@@ -1,17 +1,17 @@
-import { Swiper as SwiperPrograms } from 'swiper';
+import { Swiper as SwiperReviews } from 'swiper';
 import { Navigation, Scrollbar } from 'swiper/modules';
 import 'swiper/css';
 
-const initSwiperPrograms = () => {
-  new SwiperPrograms('.programs__swiper', {
+const initSwiperRewiews = () => {
+  new SwiperReviews('.reviews__swiper', {
     loop: false,
     modules: [Navigation, Scrollbar],
     navigation: {
-      nextEl: '.programs__button--next',
-      prevEl: '.programs__button--prev',
+      nextEl: '.reviews__button--next',
+      prevEl: '.reviews__button--prev',
     },
     scrollbar: {
-      el: '.programs__scrollbar',
+      el: '.reviews__scrollbar',
       draggable: true,
       hide: false,
     },
@@ -22,8 +22,8 @@ const initSwiperPrograms = () => {
         slidesOffsetAfter: 1,
       },
       768: {
-        slidesPerView: 2.13,
-        spaceBetween: 30,
+        slidesPerView: 1.278,
+        spaceBetween: 31,
         allowTouchMove: true,
         slidesOffsetAfter: 45,
         scrollbar: {
@@ -32,7 +32,8 @@ const initSwiperPrograms = () => {
         }
       },
       1440: {
-        slidesPerView: 3,
+        slidesPerView: 2,
+        spaceBetween: 32,
         allowTouchMove: false,
         slidesOffsetAfter: 2,
         scrollbar: {
@@ -54,8 +55,8 @@ const initSwiperPrograms = () => {
   });
 
   function updateButtonStates(swiperInstance) {
-    const prevButton = document.querySelector('.programs__button--prev');
-    const nextButton = document.querySelector('.programs__button--next');
+    const prevButton = document.querySelector('.reviews__button--prev');
+    const nextButton = document.querySelector('.reviews__button--next');
 
     prevButton.disabled = false;
     nextButton.disabled = false;
@@ -86,4 +87,4 @@ const initSwiperPrograms = () => {
   }
 };
 
-export { initSwiperPrograms };
+export { initSwiperRewiews };

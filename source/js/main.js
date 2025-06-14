@@ -27,3 +27,6 @@ initSwiperNews();
 
 import { initAccordion } from './modules/faq';
 initAccordion();
+
+import { initSwiperRewiews } from './modules/reviews';
+initSwiperRewiews();
