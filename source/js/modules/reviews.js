@@ -23,9 +23,9 @@ const initSwiperRewiews = () => {
       },
       768: {
         slidesPerView: 1.278,
-        spaceBetween: 30,
+        spaceBetween: 31,
         allowTouchMove: true,
-        slidesOffsetAfter: 48,
+        slidesOffsetAfter: 45,
         scrollbar: {
           snapOnRelease: true,
           dragSize: 326,
@@ -33,6 +33,7 @@ const initSwiperRewiews = () => {
       },
       1440: {
         slidesPerView: 2,
+        spaceBetween: 32,
         allowTouchMove: false,
         slidesOffsetAfter: 2,
         scrollbar: {
@@ -80,7 +81,7 @@ const initSwiperRewiews = () => {
   function updateScrollbar (swiperInstance) {
     const scrollbar = swiperInstance.scrollbar;
     if (scrollbar && scrollbar.drag) {
-      const progress = swiperInstance.peogress;
+      const progress = swiperInstance.progress;
       scrollbar.drag.style.transform = `translate3d(${progress * 100}%, 0, 0)`;
     }
   }

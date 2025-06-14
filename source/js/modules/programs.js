@@ -80,7 +80,7 @@ const initSwiperPrograms = () => {
   function updateScrollbar (swiperInstance) {
     const scrollbar = swiperInstance.scrollbar;
     if (scrollbar && scrollbar.drag) {
-      const progress = swiperInstance.peogress;
+      const progress = swiperInstance.progress;
       scrollbar.drag.style.transform = `translate3d(${progress * 100}%, 0, 0)`;
     }
   }

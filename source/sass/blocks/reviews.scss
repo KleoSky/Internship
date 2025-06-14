@@ -73,15 +73,15 @@
 
 .reviews__list .reviews__item {
   width: 290px;
-  padding: 32px 17px;
+  padding: 30px 15px;
   border: 2px solid var(--bg-accent, #000080);
   border-radius: 16px;
   box-sizing: border-box;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(4, min-content);
-  column-gap: 25px;
-  row-gap: 15px;
+  column-gap: 10px;
+  row-gap: 11px;
 }
 
 .reviews__item-title {
@@ -89,7 +89,7 @@
   line-height: 1.13;
   font-weight: 400;
   color: var(--bg-accent, #000080);
-  margin: 10px 0 5px;
+  margin: 13px 0 8px;
   grid-column: 1 / -1;
   grid-row: 3 / 4;
 }
@@ -109,12 +109,12 @@
 }
 
 .reviews__person-name {
-  width: 40px;
   font-size: 14px;
   line-height: 1.23;
   font-weight: 400;
   color: var(--bg-accent, #000080);
   margin: 0;
+  margin-top: -4px;
 }
 
 .reviews__program,
@@ -159,13 +159,13 @@
   flex-shrink: 1;
 }
 
-@media(max-width: 767px) {
+@media (width <= 767px) {
   .reviews__scrollbar {
     display: none;
   }
 }
 
-@media(min-width: 768px) {
+@media (width >= 768px) {
   .reviews__wrapper {
     width: 768px;
     padding: 50px 0 112px 45px;
@@ -180,7 +180,7 @@
 
   .reviews__buttons-wrapper {
     gap: 10px;
-    top: 604px;
+    top: 597px;
     left: 669px;
   }
 
@@ -191,11 +191,11 @@
 
   .reviews__list .reviews__item {
     width: 560px;
-    padding: 52px;
+    padding: 50px;
     grid-template-columns: 202px min-content 78px;
     grid-template-rows: repeat(3, min-content);
     column-gap: 25px;
-    row-gap: 25px;
+    row-gap: 21px;
   }
 
   .reviews__item-title {
@@ -203,24 +203,26 @@
     line-height: 1.2;
     margin: 0;
     margin-top: 5px;
+    margin-bottom: 3px;
     grid-column: 1 / -1;
     grid-row: 2 / 3;
   }
 
   .reviews__person {
-    column-gap: 15px;
+    column-gap: 14px;
   }
 
   .reviews__person-name {
-    width: 78px;
     font-size: 20px;
     line-height: 1.2;
+    margin-top: -2px;
   }
 
   .reviews__program,
   .reviews__period {
-    gap: 11px;
+    gap: 10px;
     align-self: center;
+    margin-top: -3px;
   }
 
   .reviews__program {
@@ -251,7 +253,9 @@
     width: 562px;
     height: 2px;
     background-color: rgba(49, 109, 194, 0.2);
-    position: relative;margin-top: 50px;
+    position: relative;
+    margin-top: 50px;
+    cursor: pointer;
   }
 
   .reviews__scrollbar .swiper-scrollbar-drag {
@@ -260,10 +264,10 @@
   }
 }
 
-@media(min-width: 1440px) {
+@media (width >= 1440px) {
   .reviews__wrapper {
     width: 1440px;
-    padding: 60px 100px;
+    padding: 65px 100px 60px;
   }
 
   .reviews__title {
@@ -271,10 +275,11 @@
     font-size: 50px;
     line-height: 1;
     margin-bottom: 45px;
+    margin-left: 3px;
   }
 
   .reviews__buttons-wrapper {
-    top: 687px;
+    top: 683px;
     left: 1292px;
   }
 
@@ -285,22 +290,32 @@
 
   .reviews__list .reviews__item {
     width: 604px;
-    padding: 52px 48px 78px 52px;
-    grid-template-columns: 245px min-content 78px;
-
-    &:nth-child(2) {
-      padding-bottom: 50px;
-    }
+    padding: 52px 48px 50px 50px;
+    grid-template-columns: 240px min-content 78px;
+    row-gap: 18px;
   }
 
   .reviews__item-title {
     font-size: 24px;
     line-height: 1.08;
+    margin-bottom: 7px;
+  }
+
+  .reviews__person {
+    column-gap: 15px;
   }
 
   .reviews__person-name {
+    width: 63px;
     font-size: 18px;
     line-height: 1.33;
+    margin-top: -6px;
+  }
+
+  .reviews__program,
+  .reviews__period {
+    gap: 11px;
+    margin-top: -5px;
   }
 
   .reviews__program-description,
@@ -310,6 +325,7 @@
 
   .reviews__item blockquote {
     min-width: 504px;
+    min-height: 156px;
     line-height: 1.63;
     grid-column: 1 / -1;
     grid-row: 3 / 4;
