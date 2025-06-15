@@ -818,7 +818,40 @@
           </div>
         </div>
       </section>
-      <div data-test="contacts">contacts</div>
+      <section class="main__contacts contacts" data-test="contacts">
+        <div class="contacts__wrapper">
+          <h2 class="contacts__title">Контакты</h2>
+          <div class="contacts__info contacts__info--address">
+            <h3 class="contacts__info-title">Центральный офис</h3>
+            <address class="contacts__info-description">г. Новосибирск, ул. Щетинкина 68, культурный центр</address>
+          </div>
+          <div class="contacts__info contacts__info--phone">
+            <h3 class="contacts__info-title">Телефон</h3>
+            <a class="contacts__info-description" href="tel:+796387687676">+7 963 876 876 76</a>
+          </div>
+          <div class="contacts__info contacts__info--email">
+            <h3 class="contacts__info-title">Email</h3>
+            <a class="contacts__info-description" href="mailto:Info@stazh.ru">Info@stazh.ru</a>
+          </div>
+          <div class="contacts__picture">
+            <picture>
+              <source media="(min-width: 1440px)" width="1240" height="486" type="image/webp"
+                srcset="img/map-desktop@1x.webp 1x, img/map-desktop@2x.webp 2x">
+              <source media="(min-width: 768px)" width="678" height="500" type="image/webp"
+                srcset="img/map-tablet@1x.webp 1x, img/map-tablet@2x.webp 2x">
+              <source width="290" height="240" type="image/webp"
+                srcset="img/map-mobile@1x.webp 1x, img/map-mobile@2x.webp 2x">
+              <source media="(min-width: 1440px)" width="1240" height="486" type="image/png"
+                srcset="img/map-desktop@1x.png 1x, img/map-desktop@2x.png 2x">
+              <source media="(min-width: 768px)" width="678" height="500" type="image/png"
+                srcset="img/map-tablet@1x.png 1x, img/map-tablet@2x.png 2x">
+              <img src="img/map-mobile@1x.png" srcset="img/map-mobile@2x.png 2x" width="290"
+                height="240"
+                alt="Карта проезда к главному офису компании">
+            </picture>
+          </div>
+        </div>
+      </section>
       <div data-test="form">form</div>
     </main>
     <div data-test="footer">footer</div>
