@@ -5,8 +5,9 @@
 }
 
 .form__label {
-  line-height: 1;
-  margin-bottom: 8px;
+  font-size: 12px;
+  line-height: 1.17;
+  margin-bottom: 12px;
   opacity: 0.8;
 }
 
@@ -14,13 +15,14 @@
 .form__tel-input,
 .form__select,
 .form__message-input {
-  width: 260px;
+  width: 270px;
   min-height: 50px;
   color: inherit;
   border: 1px solid rgba(255, 255, 255, 0.3);
   border-radius: 8px;
   box-sizing: border-box;
-  padding-left: 5px;
+  margin-bottom: 20px;
+  padding: 10px 5px;
   background-color: transparent;
 
   &:hover,
@@ -29,27 +31,46 @@
   }
 }
 
+.form__message-input {
+  height: 94px;
+  padding: 5px;
+  box-sizing: border-box;
+  resize: none;
+}
+
 .form__select {
+  width: 260px;
+  min-height: 52px;
   appearance: none;
+  cursor: pointer;
   background-repeat: no-repeat;
   background-position: 90% 50%;
-  cursor: pointer;
+  color: inherit;
+  background-color: var(--bg-accent, #000080);
+
+  &:hover option {
+    background-color: var(--bg--second, #ffffff);
+    color: var(--color-base, #484848);
+  }
 }
 
 .form__select--closed {
+  background-size: 16px 9px;
   background-image: url("/__spritemap#sprite-popup-icon-form-view");
 }
 
 .form__select--opened {
-  background-image: url("/__spritemap#sprite-popup-icon-form-view");
+  background-size: 16px 16px;
+  background-image: url("/__spritemap#sprite-popup-icon-open-form-view");
 }
 
 .form__agreement {
   display: flex;
   flex-direction: row-reverse;
+  justify-content: left;
   align-items: center;
   gap: 10px;
-  margin-bottom: 25px;
+  margin-bottom: 20px;
 }
 
 .form__label-agree {
@@ -59,16 +80,16 @@
 
 .form__input-agree {
   appearance: none;
-  width: 30px;
-  height: 23px;
-  border: 1px solid var(--bg-accent, #000080);
+  width: 20px;
+  height: 20px;
+  border: 1px solid var(--bg-second, #ffffff);
   border-radius: 2px;
-  background-color: var(--bg-accent, #000080);
+  background-color: var(--bg-second, #ffffff);
   cursor: pointer;
 
   &:hover:not(:disabled):not(:checked),
   &:focus:not(:disabled):not(:checked) {
-    background-color: rgba(49, 109, 194, 0.8);
+    background-color: rgba(255, 255, 255, 0.8);
     border: 1px solid transparent;
   }
 
@@ -80,52 +101,42 @@
 }
 
 .form__input-agree:checked {
-  background-color: var(--color-second, #ffffff);
-  background-image: url("/__spritemap#sprite-check-icon-view");
+  background-color: var(--bg-accent, #000080);
+  background-image: url("/__spritemap#sprite-check-modal-icon-view");
   background-size: 20px 18px;
   background-repeat: no-repeat;
   background-position: 50% 50%;
-  border: 1px solid var(--color-second, #ffffff);
+  border: 1px solid var(--bg-accent, #000080);
   cursor: default;
-}
-
-.form__button {
-  padding: 15px 68px 15px 30px;
-
-  &::before {
-    left: 220px;
-  }
-
-  &::after {
-    left: 233px;
-  }
 }
 
 @media (width >= 768px) {
   .form {
-    margin-top: 30px;
+    margin-top: 40px;
   }
 
   .form__label {
+    font-size: inherit;
     line-height: inherit;
-    margin-bottom: 12px;
   }
 
   .form__name-input,
   .form__tel-input,
+  .form__message-input,
   .form__select {
-    width: 350px;
-    min-height: 50px;
-    margin-bottom: 20px;
+    width: 362px;
   }
 
   .form__select {
-    background-position: 314px 50%;
+    background-position: 325px 50%;
+  }
+
+  .form__message-input {
+    height: 88px;
   }
 
   .form__agreement {
-    justify-content: left;
-    margin-bottom: 30px;
+    margin-bottom: 40px;
   }
 
   .form__label-agree {
@@ -135,6 +146,10 @@
   .form__input-agree {
     width: 20px;
     height: 20px;
+  }
+
+  .form__label-agree br {
+    display: none;
   }
 
   .form__input-agree:checked {

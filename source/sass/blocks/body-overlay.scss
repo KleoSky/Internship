@@ -1,3 +1,7 @@
+.body-overlay {
+  overflow: hidden;
+}
+
 .body-overlay::before {
   content: "";
   width: 100%;

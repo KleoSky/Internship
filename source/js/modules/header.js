@@ -3,6 +3,7 @@ const navButton = document.querySelector('.nav__button');
 const navList = document.querySelector('.nav__list');
 const navLinksSelect = document.querySelectorAll('.nav__link--select');
 const body = document.querySelector('.body');
+const html = document.querySelector('.html');
 
 const menuClose = () => {
   logo.classList.remove('header__logo-wrapper--closed');
@@ -12,6 +13,7 @@ const menuClose = () => {
   navList.classList.remove('nav__list--opened');
   navList.classList.add('nav__list--closed');
   body.classList.remove('body-overlay');
+  html.classList.remove('html-jswork');
 
   document.removeEventListener('keydown', handleEscapeKey);
   document.removeEventListener('click', handleOutsideClick);
@@ -48,6 +50,7 @@ const menuOpen = () => {
       navList.classList.remove('nav__list--closed');
       navList.classList.add('nav__list--opened');
       body.classList.add('body-overlay');
+      html.classList.add('html-jswork');
 
       document.addEventListener('keydown', handleEscapeKey);
       document.addEventListener('click', handleOutsideClick);
