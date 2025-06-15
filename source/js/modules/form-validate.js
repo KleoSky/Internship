@@ -9,28 +9,30 @@ const FIELDS = {
   }
 };
 
+const forms = document.querySelectorAll('.form');
 const initFormValidation = () => {
-  const form = document.querySelector('.modal-form');
-  if (!form) {
-    return;
+  for (const form of forms) {
+    if (!form) {
+      return;
+    }
+  
+    const telInput = form.querySelector('#tel');
+    if (telInput) {
+      telInput.addEventListener('input', handleTelInput);
+      telInput.addEventListener('focus', handleTelFocus);
+      telInput.addEventListener('blur', handleTelBlur);
+    }
+  
+    const inputs = form.querySelectorAll('input');
+    inputs.forEach((input) => {
+      input.removeAttribute('pattern');
+      input.addEventListener('input', () => validateField(input));
+      input.addEventListener('blur', () => validateField(input));
+    });
+  
+    // Обработчик отправки формы
+    form.addEventListener('submit', handleFormSubmit);
   }
-
-  const telInput = form.querySelector('#tel');
-  if (telInput) {
-    telInput.addEventListener('input', handleTelInput);
-    telInput.addEventListener('focus', handleTelFocus);
-    telInput.addEventListener('blur', handleTelBlur);
-  }
-
-  const inputs = form.querySelectorAll('input');
-  inputs.forEach((input) => {
-    input.removeAttribute('pattern');
-    input.addEventListener('input', () => validateField(input));
-    input.addEventListener('blur', () => validateField(input));
-  });
-
-  // Обработчик отправки формы
-  form.addEventListener('submit', handleFormSubmit);
 };
 
 function handleTelFocus(e) {
@@ -135,7 +137,6 @@ function getErrorElement(input) {
     errorElement.className = 'error-message';
     errorElement.style.color = '#ff5e66';
     errorElement.style.fontSize = '12px';
-    errorElement.style.marginTop = '-10px';
     errorElement.style.marginBottom = '5px';
     input.parentNode.insertBefore(errorElement, input.nextSibling);
   }

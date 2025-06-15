@@ -1,5 +1,5 @@
 const initSelectArrow = () => {
-  const select = document.querySelector('.modal-form__select');
+  const select = document.querySelector('.form__select');
 
   if (!select) {
     return;
@@ -14,14 +14,14 @@ const initSelectArrow = () => {
 
   // Обработчик события focus (когда селект получает фокус)
   select.addEventListener('focus', () => {
-    select.classList.remove('modal-form__select--closed');
-    select.classList.add('modal-form__select--opened');
+    select.classList.remove('form__select--closed');
+    select.classList.add('form__select--opened');
   });
 
   // Обработчик события blur (когда селект теряет фокус)
   select.addEventListener('blur', () => {
-    select.classList.remove('modal-form__select--opened');
-    select.classList.add('modal-form__select--closed');
+    select.classList.remove('form__select--opened');
+    select.classList.add('form__select--closed');
 
     // Возвращаем скрытый option обратно
     if (select.options.length > 0 && select.options[0].value === '') {
@@ -31,8 +31,8 @@ const initSelectArrow = () => {
 
   // Для мобильных устройств и после выбора значения
   select.addEventListener('change', () => {
-    select.classList.remove('modal-form__select--opened');
-    select.classList.add('modal-form__select--closed');
+    select.classList.remove('form__select--opened');
+    select.classList.add('form__select--closed');
 
     // Возвращаем скрытый option обратно
     if (select.options.length > 0 && select.options[0].value === '') {
@@ -46,8 +46,8 @@ const initSelectArrow = () => {
   // Дополнительный обработчик для клика вне селекта
   document.addEventListener('click', (e) => {
     if (!select.contains(e.target)) {
-      select.classList.remove('modal-form__select--opened');
-      select.classList.add('modal-form__select--closed');
+      select.classList.remove('form__select--opened');
+      select.classList.add('form__select--closed');
 
       if (select.options.length > 0 && select.options[0].value === '') {
         select.options[0].hidden = false;
