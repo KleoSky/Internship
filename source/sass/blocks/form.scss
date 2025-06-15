@@ -1,50 +1,50 @@
-.modal-form {
+.form {
   display: flex;
   flex-direction: column;
   margin-top: 25px;
 }
 
-.modal-form__label {
+.form__label {
   line-height: 1;
   margin-bottom: 8px;
   opacity: 0.8;
 }
 
-.modal-form__name-input,
-.modal-form__tel-input,
-.modal-form__select {
+.form__name-input,
+.form__tel-input,
+.form__select,
+.form__message-input {
   width: 260px;
-  min-height: 44px;
-  border: 1px solid rgba(72, 72, 72, 0.3);
+  min-height: 50px;
+  color: inherit;
+  border: 1px solid rgba(255, 255, 255, 0.3);
   border-radius: 8px;
   box-sizing: border-box;
-  margin-bottom: 15px;
   padding-left: 5px;
+  background-color: transparent;
 
   &:hover,
   &:active {
-    border-color: #484848;
+    border-color: var(--color-second, #ffffff);
   }
 }
 
-.modal-form__select {
-  background-color: transparent;
+.form__select {
   appearance: none;
-  background-size: 16px 16px;
   background-repeat: no-repeat;
   background-position: 90% 50%;
   cursor: pointer;
 }
 
-.modal-form__select--closed {
-  background-image: url("/__spritemap#sprite-popup-icon-view");
+.form__select--closed {
+  background-image: url("/__spritemap#sprite-popup-icon-form-view");
 }
 
-.modal-form__select--opened {
-  background-image: url("/__spritemap#sprite-popup-icon-open-view");
+.form__select--opened {
+  background-image: url("/__spritemap#sprite-popup-icon-form-view");
 }
 
-.modal-form__agreement {
+.form__agreement {
   display: flex;
   flex-direction: row-reverse;
   align-items: center;
@@ -52,12 +52,12 @@
   margin-bottom: 25px;
 }
 
-.modal-form__label-agree {
+.form__label-agree {
   font-size: 12px;
   line-height: 1.17;
 }
 
-.modal-form__input-agree {
+.form__input-agree {
   appearance: none;
   width: 30px;
   height: 23px;
@@ -79,7 +79,7 @@
   }
 }
 
-.modal-form__input-agree:checked {
+.form__input-agree:checked {
   background-color: var(--color-second, #ffffff);
   background-image: url("/__spritemap#sprite-check-icon-view");
   background-size: 20px 18px;
@@ -89,7 +89,7 @@
   cursor: default;
 }
 
-.modal-form__button {
+.form__button {
   padding: 15px 68px 15px 30px;
 
   &::before {
@@ -102,46 +102,46 @@
 }
 
 @media (width >= 768px) {
-  .modal-form {
+  .form {
     margin-top: 30px;
   }
 
-  .modal-form__label {
+  .form__label {
     line-height: inherit;
     margin-bottom: 12px;
   }
 
-  .modal-form__name-input,
-  .modal-form__tel-input,
-  .modal-form__select {
+  .form__name-input,
+  .form__tel-input,
+  .form__select {
     width: 350px;
     min-height: 50px;
     margin-bottom: 20px;
   }
 
-  .modal-form__select {
+  .form__select {
     background-position: 314px 50%;
   }
 
-  .modal-form__agreement {
+  .form__agreement {
     justify-content: left;
     margin-bottom: 30px;
   }
 
-  .modal-form__label-agree {
+  .form__label-agree {
     line-height: 1;
   }
 
-  .modal-form__input-agree {
+  .form__input-agree {
     width: 20px;
     height: 20px;
   }
 
-  .modal-form__input-agree:checked {
+  .form__input-agree:checked {
     background-size: 20px 20px;
   }
 
-  .modal-form__button {
+  .form__button {
     width: 194px;
     margin: 0 auto;
     padding: 20px 80px 20px 30px;
@@ -157,7 +157,7 @@
 }
 
 @media (width >= 1440px) {
-  .modal-form__label {
+  .form__label {
     line-height: 1.3;
   }
 }

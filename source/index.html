@@ -706,7 +706,8 @@
             </li>
             <li class="faq__item faq__item--current" rel="tab-8">
               <h3 class="faq__item-title">Как определяется стоимость программы?</h3>
-              <p>Полная стоимость определяется организаторами в зависимости от&nbsp;направления. В большинстве случаев грант
+              <p>Полная стоимость определяется организаторами в зависимости от&nbsp;направления. В большинстве случаев
+                грант
                 «Стажировка» не покрывает полную стоимость программы, и поэтому предусматривается определённая доля
                 личного
                 участия.</p>
@@ -845,47 +846,80 @@
                 srcset="img/map-desktop@1x.png 1x, img/map-desktop@2x.png 2x">
               <source media="(min-width: 768px)" width="678" height="500" type="image/png"
                 srcset="img/map-tablet@1x.png 1x, img/map-tablet@2x.png 2x">
-              <img src="img/map-mobile@1x.png" srcset="img/map-mobile@2x.png 2x" width="290"
-                height="240"
+              <img src="img/map-mobile@1x.png" srcset="img/map-mobile@2x.png 2x" width="290" height="240"
                 alt="Карта проезда к главному офису компании">
             </picture>
           </div>
         </div>
       </section>
-      <div data-test="form">form</div>
+      <section class="main__form form-content" data-test="form">
+        <div class="form-content__background-wrapper">
+          <div class="form-content__wrapper">
+            <h2 class="form-content__title" id="write">Напишите нам</h2>
+            <p class="form-content__description">Оставьте ваши контакты, если у вас остались вопросы – мы на них
+              ответим!</p>
+            <form class="form-content__form form" action="https://echo.htmlacademy.ru/" method="post">
+              <label class="form__label" for="name">Имя</label>
+              <input class="form__name-input" type="text" name="name-input" id="name" pattern="[A-Za-zA-Яа-яЁё\s]+"
+                required>
+              <label class="form__label" for="tel">Телефон</label>
+              <input class="form__tel-input" type="tel" name="tel-input" id="tel" pattern="^[0-9]+{10}" required>
+              <label class="form__label" for="text">Ваше сообщение</label>
+              <input class="form__message-input" type="text" name="text-input" id="text" required>
+              <label class="form__label" for="city">Выберите город</label>
+              <select class="form__select form__select--closed" name="city-choice" id="city" required>
+                <option class="form__option" value="">&nbsp;</option>
+                <option class="form__option" value="moscow">Москва</option>
+                <option class="form__option" value="petersburg">Санкт-Петербург</option>
+                <option class="form__option" value="novosibirsk">Новосибирск</option>
+                <option class="form__option" value="nijniy novgorod">Нижний Новгород</option>
+                <option class="form__option" value="ekaterinburg">Екатеринбург</option>
+                <option class="form__option" value="vladivistok">Владивосток</option>
+                <option class="form__option" value="kaliningrad">Калининград</option>
+              </select>
+              <div class="form__agreement">
+                <label class="form__label-agree" for="agreement">Я согласен на обработку моих персональных
+                  данных</label>
+                <input class="form__input-agree" type="checkbox" name="agree" id="agreement" required>
+              </div>
+              <button class="form__button main-button" type="submit">Отправить</button>
+            </form>
+          </div>
+        </div>
+      </section>
     </main>
     <div data-test="footer">footer</div>
   </div>
   <script type="module" src="js/main.js"></script>
   <div class="body__modal-wrapper body__modal-wrapper--closed" tabindex="0">
     <div class="body__modal modal">
-      <h2 class="modal__title" id="write">Напишите нам</h2>
+      <h2 class="modal__title" id="write-modal">Напишите нам</h2>
       <p class="modal__description">Оставьте ваши контакты, если у вас остались вопросы – мы на них ответим!</p>
-      <form class="modal__form modal-form" action="https://echo.htmlacademy.ru/" method="post">
-        <label class="modal-form__label" for="name">Имя</label>
-        <input class="modal-form__name-input" type="text" name="name-input" id="name" pattern="[A-Za-zA-Яа-яЁё\s]+"
-          required>
-        <label class="modal-form__label" for="tel">Телефон</label>
-        <input class="modal-form__tel-input" type="tel" name="tel-input" id="tel" pattern="^[0-9]+{10}" required>
-        <label class="modal-form__label" for="city">Выберите город</label>
-        <select class="modal-form__select modal-form__select--closed" name="city-choice" id="city" required>
-          <option class="modal-form__option" value="">&nbsp;</option>
-          <option class="modal-form__option" value="moscow">Москва</option>
-          <option class="modal-form__option" value="petersburg">Санкт-Петербург</option>
-          <option class="modal-form__option" value="novosibirsk">Новосибирск</option>
-          <option class="modal-form__option" value="nijniy novgorod">Нижний Новгород</option>
-          <option class="modal-form__option" value="ekaterinburg">Екатеринбург</option>
-          <option class="modal-form__option" value="vladivistok">Владивосток</option>
-          <option class="modal-form__option" value="kaliningrad">Калининград</option>
+      <form class="modal__form form" action="https://echo.htmlacademy.ru/" method="post">
+        <label class="form__label" for="name">Имя</label>
+        <input class="form__name-input" type="text" name="name-input" id="name" pattern="[A-Za-zA-Яа-яЁё\s]+" required>
+        <label class="form__label" for="tel">Телефон</label>
+        <input class="form__tel-input" type="tel" name="tel-input" id="tel" pattern="^[0-9]+{10}" required>
+        <label class="form__label" for="city">Выберите город</label>
+        <select class="form__select form__select--closed" name="city-choice" id="city" required>
+          <option class="form__option" value="">&nbsp;</option>
+          <option class="form__option" value="moscow">Москва</option>
+          <option class="form__option" value="petersburg">Санкт-Петербург</option>
+          <option class="form__option" value="novosibirsk">Новосибирск</option>
+          <option class="form__option" value="nijniy novgorod">Нижний Новгород</option>
+          <option class="form__option" value="ekaterinburg">Екатеринбург</option>
+          <option class="form__option" value="vladivistok">Владивосток</option>
+          <option class="form__option" value="kaliningrad">Калининград</option>
         </select>
-        <div class="modal-form__agreement">
-          <label class="modal-form__label-agree" for="agreement">Я согласен на обработку моих персональных
+        <div class="form__agreement">
+          <label class="form__label-agree" for="agreement">Я согласен на обработку моих персональных
             данных</label>
-          <input class="modal-form__input-agree" type="checkbox" name="agree" id="agreement" required>
+          <input class="form__input-agree form__input-agree--modal" type="checkbox" name="agree" id="agreement"
+            required>
         </div>
-        <button class="modal-form__button main-button" type="submit">Отправить</button>
+        <button class="form__button main-button" type="submit">Отправить</button>
       </form>
-      <button class="modal__button-close" type="button">
+      <button class="modal__button-close button-close" type="button">
         <span class="visually-hidden">Закрыть форму</span>
       </button>
     </div>
