@@ -4,7 +4,6 @@ const navList = document.querySelector('.nav__list');
 const navLinksSelect = document.querySelectorAll('.nav__link--select');
 const body = document.querySelector('.body');
 
-// Закрытие основного меню
 const menuClose = () => {
   logo.classList.remove('header__logo-wrapper--closed');
   logo.classList.remove('header__logo-wrapper--overlay');
@@ -24,7 +23,6 @@ function handleEscapeKey(event) {
   }
 }
 
-// Проверка клика вне навигации
 function handleOutsideClick(event) {
   const isNav = event.target.closest('.nav');
   const isButton = event.target.closest('.nav__button');
@@ -62,15 +60,12 @@ const toggleSubMenu = (link) => {
   const sublist = link.nextElementSibling;
 
   if (sublist.classList.contains('nav__sublist--opened')) {
-    // Закрываем подменю
     link.classList.remove('nav__link--select-opened');
     link.classList.remove('nav__link--active');
     link.classList.add('nav__link--select');
     sublist.classList.remove('nav__sublist--opened');
     sublist.classList.add('nav__sublist--closed');
-
   } else {
-    // Открываем подменю
     link.classList.remove('nav__link--select');
     link.classList.add('nav__link--select-opened');
     link.classList.add('nav__link--active');
@@ -79,7 +74,6 @@ const toggleSubMenu = (link) => {
   }
 };
 
-// Обработчик событий (клик + тач на мобильных)
 const subMenuOpen = () => {
   const handleInteraction = (event) => {
     event.preventDefault();
@@ -95,7 +89,6 @@ const subMenuOpen = () => {
         const deltaX = Math.abs(touchEndX - link.touchStartX);
         const deltaY = Math.abs(touchEndY - link.touchStartY);
 
-        // Если движение небольшое — считаем это тапом
         if (deltaX < 5 && deltaY < 5) {
           toggleSubMenu(link);
         }
@@ -105,14 +98,12 @@ const subMenuOpen = () => {
     }
   };
 
-  // Навешиваем обработчики
   navLinksSelect.forEach((link) => {
     link.addEventListener('click', handleInteraction);
     link.addEventListener('touchstart', handleInteraction, { passive: false });
     link.addEventListener('touchend', handleInteraction, { passive: false });
   });
 
-  // Закрытие подменю при клике вне области (только для десктопов)
   document.addEventListener('click', (event) => {
     if (window.innerWidth >= 1440) {
       const isClickInside = [...navLinksSelect].some(
