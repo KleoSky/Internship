@@ -9,28 +9,31 @@ const FIELDS = {
   }
 };
 
-const forms = document.querySelectorAll('.form');
 const initFormValidation = () => {
+  const forms = document.querySelectorAll('.form');
+
+  // Общие обработчики для всех телефонных полей
+  const handleTelEvents = (input) => {
+    input.addEventListener('input', handleTelInput);
+    input.addEventListener('focus', handleTelFocus);
+    input.addEventListener('blur', handleTelBlur);
+  };
+
   for (const form of forms) {
     if (!form) {
-      return;
+      continue;
     }
-  
-    const telInput = form.querySelector('#tel');
-    if (telInput) {
-      telInput.addEventListener('input', handleTelInput);
-      telInput.addEventListener('focus', handleTelFocus);
-      telInput.addEventListener('blur', handleTelBlur);
-    }
-  
+
+    const telInputs = form.querySelectorAll('[id^="tel"]');
+    telInputs.forEach(handleTelEvents);
+
     const inputs = form.querySelectorAll('input');
     inputs.forEach((input) => {
       input.removeAttribute('pattern');
       input.addEventListener('input', () => validateField(input));
       input.addEventListener('blur', () => validateField(input));
     });
-  
-    // Обработчик отправки формы
+
     form.addEventListener('submit', handleFormSubmit);
   }
 };
@@ -137,6 +140,7 @@ function getErrorElement(input) {
     errorElement.className = 'error-message';
     errorElement.style.color = '#ff5e66';
     errorElement.style.fontSize = '12px';
+    errorElement.style.marginTop = '-17px';
     errorElement.style.marginBottom = '5px';
     input.parentNode.insertBefore(errorElement, input.nextSibling);
   }
@@ -148,7 +152,7 @@ function handleFormSubmit(e) {
   const form = e.target;
   let isFormValid = true;
 
-  const inputs = form.querySelectorAll('input, select');
+  const inputs = form.querySelectorAll('input', 'select');
   inputs.forEach((input) => {
     const isValid = validateField(input);
     if (!isValid) {

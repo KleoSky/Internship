@@ -26,13 +26,21 @@
   padding: 0 15px;
 }
 
+.modal__form .form__label {
+  line-height: 1;
+  opacity: 0.8;
+  margin-bottom: 8px;
+}
+
 .modal__form .form__name-input,
 .modal__form .form__tel-input,
 .modal__form .form__select,
 .modal__form .form__message-input {
+  width: 260px;
   min-height: 44px;
   border: 1px solid rgba(72, 72, 72, 0.3);
   margin-bottom: 15px;
+  background-color: transparent;
 
   &:hover,
   &:active {
@@ -41,7 +49,8 @@
 }
 
 .modal__form .form__select {
-  background-size: 16px 16px;
+  padding: 0;
+  padding-left: 5px;
 }
 
 .modal__form .form__select--closed {
@@ -52,13 +61,91 @@
   background-image: url("/__spritemap#sprite-popup-icon-open-view");
 }
 
+.modal__form .form__agreement {
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.modal__form .form__input-agree {
+  border: 1px solid var(--bg-accent, #000080);
+  background-color: var(--bg-accent, #000080);
+
+  &:hover:not(:disabled):not(:checked),
+  &:focus:not(:disabled):not(:checked) {
+    background-color: rgba(49, 109, 194, 0.8);
+    border: 1px solid transparent;
+  }
+
+  &:disabled {
+    background-color: var(--bg-button-dis, #484848);
+    border: 1px solid transparent;
+    cursor: default;
+  }
+}
+
+.modal__form .form__input-agree:checked {
+  background-color: var(--color-second, #ffffff);
+  background-image: url("/__spritemap#sprite-check-icon-view");
+  border: 1px solid var(--color-second, #ffffff);
+}
+
+.modal__form .form__button {
+  padding: 15px 68px 15px 30px;
+  border: 1px solid var(--bg-accent, #000080);
+  color: var(--bg-accent, #000080);
+  background-color: var(--bg-second, #ffffff);
+  justify-content: center;
+
+  &::before {
+    background-color: var(--bg-accent, #000080);
+    left: 220px;
+  }
+
+  &::after {
+    background-color: var(--bg-second, #ffffff);
+    left: 233px;
+  }
+
+  &:hover:not(:disabled),
+  &:focus:not(:disabled),
+  &:focus-visible:not(:disabled) {
+    background-color: var(--bg-accent, #000080);
+    color: var(--bg-second, #ffffff);
+  }
+
+  &:hover:not(:disabled)::before,
+  &:focus:not(:disabled)::before,
+  &:focus-visible:not(:disabled)::before {
+    background-color: var(--bg-second, #ffffff);
+  }
+
+  &:hover:not(:disabled)::after,
+  &:focus:not(:disabled)::after,
+  &:focus-visible:not(:disabled)::after {
+    background-color: var(--bg-accent, #000080);
+  }
+
+  &:active:not(:disabled) {
+    background-color: var(--bg-accent, #000080);
+    color: rgba(255, 255, 255, 0.7);
+  }
+
+  &:active:not(:disabled)::before {
+    background-color:  var(--bg-second, #ffffff);
+  }
+
+  &:active:not(:disabled)::after {
+    background-color: rgba(49, 109, 194, 0.7);
+  }
+}
+
 .modal__button-close {
   top: 20px;
   right: 20px;
   background-color: var(--bg-accent, #000080);
 }
 
-@media (width >=768px) {
+@media (width >= 768px) {
   .modal {
     width: 510px;
     padding: 60px 80px;
@@ -76,6 +163,32 @@
     padding: 0;
   }
 
+  .modal__form .form__name-input,
+  .modal__form .form__tel-input,
+  .modal__form .form__select {
+    width: 350px;
+    min-height: 50px;
+    margin-bottom: 20px;
+  }
+
+  .modal__form .form__label {
+    line-height: inherit;
+  }
+
+  .modal__form .form__button {
+    width: 194px;
+    margin: 0 auto;
+    padding: 20px 80px 20px 30px;
+
+    &::before {
+      left: 140px;
+    }
+
+    &::after {
+      left: 159px;
+    }
+  }
+
   .modal__button-close {
     top: 30px;
     right: 30px;
@@ -85,7 +198,7 @@
   }
 }
 
-@media (width >=1440px) {
+@media (width >= 1440px) {
   .modal__title {
     font-size: 32px;
     line-height: 1.13;

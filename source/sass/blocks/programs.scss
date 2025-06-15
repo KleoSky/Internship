@@ -103,6 +103,20 @@
   &::after {
     left: 178px;
   }
+
+  // Добавить класс .programs__link--disabled для отключения доступности
+  &--disabled {
+    border: 1px solid var(--bg-button-dis, #a9afb7);
+    color: var(--bg-button-dis, #a9afb7);
+  }
+
+  &--disabled::before {
+    background-color: var(--bg-button-dis, #a9afb7);
+  }
+
+  &--disabled::after {
+    background-color: var(--bg-second, #ffffff);
+  }
 }
 
 @media (width >= 768px) {
