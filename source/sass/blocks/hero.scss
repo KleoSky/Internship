@@ -2,6 +2,7 @@
   width: 320px;
   margin: 0 auto;
   position: relative;
+  background-color: rgba(41, 131, 178, 0.4);
 }
 
 .hero__swiper {
@@ -10,6 +11,7 @@
 }
 
 .hero__list {
+  min-height: 568px;
   margin: 0;
   padding: 0;
   list-style: none;
@@ -88,6 +90,10 @@
     width: 768px;
   }
 
+  .hero__list {
+    min-height: 1024px;
+  }
+
   .hero__bullets {
     padding: 14px 20px;
     gap: 12px;
@@ -114,6 +120,10 @@
 @media (width >= 1440px) {
   .hero {
     width: 1440px;
+  }
+
+  .hero__list {
+    min-height: 800px;
   }
 
   .hero__bullets {

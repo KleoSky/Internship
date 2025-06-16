@@ -108,6 +108,8 @@
   &--disabled {
     border: 1px solid var(--bg-button-dis, #a9afb7);
     color: var(--bg-button-dis, #a9afb7);
+    pointer-events: none;
+    cursor: default;
   }
 
   &--disabled::before {
