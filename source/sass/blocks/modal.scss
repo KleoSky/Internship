@@ -131,7 +131,7 @@
   }
 
   &:active:not(:disabled)::before {
-    background-color:  var(--bg-second, #ffffff);
+    background-color: var(--bg-second, #ffffff);
   }
 
   &:active:not(:disabled)::after {
