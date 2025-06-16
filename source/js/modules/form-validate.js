@@ -12,7 +12,6 @@ const FIELDS = {
 const initFormValidation = () => {
   const forms = document.querySelectorAll('.form');
 
-  // Общие обработчики для всех телефонных полей
   const handleTelEvents = (input) => {
     input.addEventListener('input', handleTelInput);
     input.addEventListener('focus', handleTelFocus);

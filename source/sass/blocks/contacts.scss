@@ -52,12 +52,10 @@
 }
 
 .contacts__picture {
+  min-height: 240px;
+  background-color: rgba(41, 131, 178, 0.4);
   padding-top: 30px;
   border-top: 2px solid rgba(255, 255, 255, 0.2);
-}
-
-.contacts__picture img {
-  line-height: 0;
 }
 
 @media (width >= 768px) {
