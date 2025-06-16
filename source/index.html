@@ -165,7 +165,7 @@
       </section>
     </header>
     <main class="body__main main">
-      <section class="main__about about" data-test="about">
+      <section class="main__about about" data-test="about" id="about">
         <h2 class="about__title">О проекте «Стажировка»</h2>
         <div class="about__head">
           <p>«Стажировка» — совместный проект
@@ -210,7 +210,7 @@
           </li>
         </ul>
       </section>
-      <section class="main__programs programs" data-test="programs">
+      <section class="main__programs programs" data-test="programs" id="programs">
         <div class="programs__wrapper">
           <h2 class="programs__title">Программы</h2>
           <div class="programs__buttons-wrapper">
@@ -311,7 +311,7 @@
           <a class="programs__link main-button" href="#">Все программы</a>
         </div>
       </section>
-      <section class="main__grant grant" data-test="grant">
+      <section class="main__grant grant" data-test="grant" id="grant">
         <div class="grant__wrapper">
           <h2 class="grant__title">Как поехать</h2>
           <p>Свяжитесь с координатором, чтобы узнать полную информацию.
@@ -347,7 +347,7 @@
           </div>
         </div>
       </section>
-      <section class="main__news news" data-test="news">
+      <section class="main__news news" data-test="news" id="news">
         <div class="news__wrapper-main">
           <h2 class="news__title">Новости и материалы</h2>
           <ul class="news__tab-list">
@@ -739,7 +739,7 @@
           </ul>
         </div>
       </section>
-      <section class="main__reviews reviews" data-test="reviews">
+      <section class="main__reviews reviews" data-test="reviews" id="reviews">
         <div class="reviews__wrapper">
           <h2 class="reviews__title">Отзывы</h2>
           <div class="reviews__buttons-wrapper">
@@ -819,7 +819,7 @@
           </div>
         </div>
       </section>
-      <section class="main__contacts contacts" data-test="contacts">
+      <section class="main__contacts contacts" data-test="contacts" id="contacts">
         <div class="contacts__wrapper">
           <h2 class="contacts__title">Контакты</h2>
           <div class="contacts__info contacts__info--address">
@@ -888,7 +888,54 @@
         </div>
       </section>
     </main>
-    <div data-test="footer">footer</div>
+    <footer class="body__footer footer" data-test="footer">
+      <div class="footer__wrapper">
+        <div class="footer__logo-wrapper">
+          <svg width="30" height="30">
+            <use href="/__spritemap#sprite-logo"></use>
+          </svg>
+        </div>
+        <ul class="footer__menu-list">
+          <li class="footer__menu-item">
+            <a class="footer__menu-link" href="#about">О проекте</a>
+          </li>
+          <li class="footer__menu-item">
+            <a class="footer__menu-link" href="#programs">Программы</a>
+          </li>
+          <li class="footer__menu-item">
+            <a class="footer__menu-link" href="#grant">Как поехать</a>
+          </li>
+          <li class="footer__menu-item">
+            <a class="footer__menu-link" href="#reviews">Отзывы</a>
+          </li>
+          <li class="footer__menu-item">
+            <a class="footer__menu-link" href="#news">Новости</a>
+          </li>
+          <li class="footer__menu-item">
+            <a class="footer__menu-link" href="#contacts">Контакты</a>
+          </li>
+        </ul>
+        <a class="footer__policy" href="#">Политика конфиденциальности</a>
+        <p class="footer__copyright">Стажировка © 2023 Все права защищены</p>
+        <ul class="footer__social-list">
+          <li class="footer__social-item">
+            <a class="footer__social-link footer__social-link--vk" href="#" target="_blank" rel="noreferrer noopener">
+              <span class="visually-hidden">ВКонтакте</span>
+            </a>
+          </li>
+          <li class="footer__social-item">
+            <a class="footer__social-link footer__social-link--ok" href="#" target="_blank" rel="noreferrer noopener">
+              <span class="visually-hidden">Одноклассники</span>
+            </a>
+          </li>
+          <li class="footer__social-item">
+            <a class="footer__social-link footer__social-link--rd" href="#" target="_blank" rel="noreferrer noopener">
+              <span class="visually-hidden">Reddit</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </footer>
   </div>
   <script type="module" src="js/main.js"></script>
   <div class="body__modal-wrapper body__modal-wrapper--closed" tabindex="0">
