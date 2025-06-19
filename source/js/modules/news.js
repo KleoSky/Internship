@@ -1,14 +1,21 @@
 import { Swiper as SwiperNews } from 'swiper';
-import { Navigation } from 'swiper/modules';
+import { Navigation, Pagination } from 'swiper/modules';
 import 'swiper/css';
 
 const initSwiperNews = () => {
   new SwiperNews('.news__wrapper-second', {
     loop: false,
-    modules: [Navigation],
+    modules: [Navigation, Pagination],
     navigation: {
       nextEl: '.news__pagination-arrow--next',
       prevEl: '.news__pagination-arrow--prev',
+    },
+    pagination: {
+      el: '.news__pagination-list',
+      clickable: true,
+      renderBullet: function (index, className) {
+        return `<span class="${ className }">${ index + 1 }</span>`;
+      },
     },
     breakpoints: {
       320: {
