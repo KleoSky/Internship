@@ -49,13 +49,6 @@ const initAccordion = () => {
 
   // Обработчики событий
   accordionItems.forEach((item) => {
-    item.addEventListener('click', (e) => {
-      if (!e.target.closest('.faq__button')) {
-        e.preventDefault();
-        e.stopPropagation();
-        toggleItem(item);
-      }
-    })
     const button = item.querySelector('.faq__button');
     button.addEventListener('click', (e) => {
       e.preventDefault();
