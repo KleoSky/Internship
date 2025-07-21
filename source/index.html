@@ -919,8 +919,10 @@
               ответим!</p>
             <form class="form-content__form form" action="https://echo.htmlacademy.ru/" method="post">
               <label class="form__label" for="name">Имя</label>
-              <input class="form__name-input" type="text" name="name-input" id="name" pattern="[A-Za-zA-Яа-яЁё\s]+"
+              <div class="form__name-input">
+                <input type="text" name="name-input" id="name" pattern="[A-Za-zA-Яа-яЁё\s]+"
                 required>
+              </div>
               <label class="form__label" for="tel">Телефон</label>
               <input class="form__tel-input" type="tel" name="tel-input" id="tel" pattern="^[0-9]+{10}" required>
               <label class="form__label" for="text">Ваше сообщение</label>
@@ -937,9 +939,10 @@
                 <option class="form__option" value="kaliningrad">Калининград</option>
               </select>
               <div class="form__agreement">
-                <label class="form__label-agree" for="agreement">Я согласен на обработку моих персональных<br>
-                  данных</label>
-                <input class="form__input-agree" type="checkbox" name="agree" id="agreement" required>
+                <label class="form__label-agree">Я согласен на обработку моих персональных<br>
+                  данных
+                <input class="form__input-agree" type="checkbox" name="agree" required>
+              </label>
               </div>
               <button class="form__button main-button" type="submit">Отправить</button>
             </form>
@@ -1003,8 +1006,10 @@
       <p class="modal__description">Оставьте ваши контакты, если у вас остались вопросы - мы на них ответим!</p>
       <form class="modal__form form" action="https://echo.htmlacademy.ru/" method="post">
         <label class="form__label" for="name-modal">Имя</label>
-        <input class="form__name-input" type="text" name="name-input" id="name-modal" pattern="[A-Za-zA-Яа-яЁё\s]+"
+        <div class="form__name-input">
+          <input type="text" name="name-input" id="name-modal" pattern="[A-Za-zA-Яа-яЁё\s]+"
           required>
+        </div>
         <label class="form__label" for="tel-modal">Телефон</label>
         <input class="form__tel-input" type="tel" name="tel-input" id="tel-modal" pattern="^[0-9]+{10}" required>
         <label class="form__label" for="city-modal">Выберите город</label>
