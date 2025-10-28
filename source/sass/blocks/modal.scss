@@ -32,7 +32,7 @@
   margin-bottom: 8px;
 }
 
-.modal__form .form__name-input,
+.modal__form .form__name-input input,
 .modal__form .form__tel-input,
 .modal__form .form__select,
 .modal__form .form__message-input {
@@ -163,7 +163,7 @@
     padding: 0;
   }
 
-  .modal__form .form__name-input,
+  .modal__form .form__name-input input,
   .modal__form .form__tel-input,
   .modal__form .form__select {
     width: 350px;

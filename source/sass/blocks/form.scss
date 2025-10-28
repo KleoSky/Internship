@@ -11,7 +11,7 @@
   opacity: 0.8;
 }
 
-.form__name-input,
+.form__name-input input,
 .form__tel-input,
 .form__select,
 .form__message-input {
@@ -64,7 +64,7 @@
   background-image: url("/__spritemap#sprite-popup-icon-open-form-view");
 }
 
-.form__agreement {
+.form__agreement label {
   display: flex;
   flex-direction: row-reverse;
   justify-content: left;
@@ -120,7 +120,7 @@
     line-height: inherit;
   }
 
-  .form__name-input,
+  .form__name-input input,
   .form__tel-input,
   .form__message-input,
   .form__select {
@@ -135,7 +135,7 @@
     height: 88px;
   }
 
-  .form__agreement {
+  .form__agreement label{
     margin-bottom: 40px;
   }
 
