@@ -54,7 +54,7 @@
     display: block;
     background-color: var(--bg-second, #ffffff);
     position: absolute;
-    mask: url("/__spritemap#sprite-corner-icon-view") center / 18px 18px no-repeat;
+    mask: url("./assets/__spritemap#sprite-corner-icon-view") center / 18px 18px no-repeat;
     top: 25px;
     left: 146px;
     transform: rotate(-90deg);

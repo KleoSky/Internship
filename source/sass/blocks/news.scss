@@ -101,7 +101,7 @@
     display: block;
     background-color: var(--bg-base, #f0efe9);
     position: absolute;
-    mask: url("/__spritemap#sprite-corner-icon-view") center / 16px 16px no-repeat;
+    mask: url("./assets/__spritemap#sprite-corner-icon-view") center / 16px 16px no-repeat;
     transform: rotate(-90deg);
     top: 224px;
     left: 263px;
@@ -179,7 +179,7 @@
     display: block;
     background-color: var(--bg-base, #f0efe9);
     position: absolute;
-    mask: url("/__spritemap#sprite-corner-icon-view") center / 16px 16px no-repeat;
+    mask: url("./assets/__spritemap#sprite-corner-icon-view") center / 16px 16px no-repeat;
     transform: rotate(-90deg);
   }
 
@@ -214,7 +214,7 @@
     display: block;
     background-color: var(--bg-base, #f0efe9);
     position: absolute;
-    mask: url("/__spritemap#sprite-corner-icon-view") center / 16px 16px no-repeat;
+    mask: url("./assets/__spritemap#sprite-corner-icon-view") center / 16px 16px no-repeat;
     transform: rotate(-90deg);
     top: -16px;
     left: 200px;
@@ -344,11 +344,11 @@
   }
 
   &--prev::before {
-    mask: url("/__spritemap#sprite-arrow-left-icon-view") center / 10px 10px no-repeat;
+    mask: url("./assets/__spritemap#sprite-arrow-left-icon-view") center / 10px 10px no-repeat;
   }
 
   &--next::before {
-    mask: url("/__spritemap#sprite-arrow-right-icon-view") center / 10px 10px no-repeat;
+    mask: url("./assets/__spritemap#sprite-arrow-right-icon-view") center / 10px 10px no-repeat;
   }
 
   &:hover:not(:disabled)::before,
@@ -593,7 +593,7 @@
       display: block;
       background-color: var(--bg-base, #f0efe9);
       position: absolute;
-      mask: url("/__spritemap#sprite-corner-icon-view") center / 16px 16px no-repeat;
+      mask: url("./assets/__spritemap#sprite-corner-icon-view") center / 16px 16px no-repeat;
       transform: rotate(-90deg);
       top: 153px;
       left: 467px;
