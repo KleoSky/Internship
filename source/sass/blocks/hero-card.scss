@@ -23,10 +23,9 @@
 }
 
 .hero-card__content {
-  position: absolute;
-  top: 229px;
-  left: 15px;
   z-index: 1;
+  grid-column: 2 / 3;
+  grid-row: 2 / 3;
 }
 
 .hero-card__title {

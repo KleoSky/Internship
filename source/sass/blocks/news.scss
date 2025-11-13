@@ -258,39 +258,25 @@
   display: flex;
   flex-wrap: wrap;
   gap: 16px;
-  counter-reset: list;
-}
-
-.news__pagination-item {
-  counter-increment: list;
 }
 
 .news__pagination-button {
+  font-size: 14px;
+  line-height: 1;
+  font-weight: 500;
   width: 26px;
   height: 26px;
+  color: rgba(49, 109, 194, 0.6);
   cursor: pointer;
   border: 2px solid transparent;
   border-radius: 50%;
   box-sizing: border-box;
-
-  &::before {
-    content: counter(list) " ";
-    font-family: inherit;
-    font-size: 14px;
-    line-height: 1;
-    font-weight: 500;
-    color: rgba(49, 109, 194, 0.6);
-    width: 15px;
-    height: 15px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    top: 0;
-    left: -2px;
-  }
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
   &--current {
+    color: var(--color-second, #ffffff);
     background-color: var(--bg-accent, #000080);
     border-color: var(--bg-accent, #000080);
     cursor: default;
@@ -322,9 +308,12 @@
   }
 }
 
-.news__pagination-button--current::before {
-  color: var(--color-second, #ffffff);
-}
+// .news__pagination-list .swiper-pagination-bullet-active {
+//   color: var(--color-second, #ffffff);
+//   background-color: var(--bg-accent, #000080);
+//   border-color: var(--bg-accent, #000080);
+//   cursor: default;
+// }
 
 .news__pagination-arrow {
   width: 22px;
@@ -362,7 +351,7 @@
   }
 }
 
-@media (width >= 768px) {
+@media (width >=768px) {
   .news__wrapper-main {
     width: 678px;
     padding: 51px 45px 50px;
@@ -465,22 +454,16 @@
     gap: 20px;
   }
 
-  .news__pagination-button {
+  .news__pagination-list .swiper-pagination-bullet {
     width: 32px;
     height: 32px;
-
-    &::before {
-      font-size: 16px;
-      line-height: 1.25;
-      font-weight: 400;
-      width: 20px;
-      height: 20px;
-      left: -1px;
-    }
+    font-size: 16px;
+    line-height: 1.25;
+    font-weight: 400;
   }
 }
 
-@media (width >= 1440px) {
+@media (width >=1440px) {
   .news__wrapper-main {
     width: 1240px;
     padding: 60px 100px;
@@ -633,9 +616,5 @@
 
   .news__pagination-wrapper {
     margin-top: 40px;
-  }
-
-  .news__pagination-button::before {
-    left: -2px;
   }
 }

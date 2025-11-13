@@ -33,6 +33,21 @@ const initFormValidation = () => {
       input.addEventListener('blur', () => validateField(input));
     });
 
+    const nameInput = form.querySelectorAll('.form__name-input');
+    const telInput = form.querySelectorAll('.form__tel-input');
+
+    nameInput.forEach((input) => {
+      input.addEventListener('input', (e) => {
+        e.target.value = e.target.value.replace(/[0-9]/g, '');
+      })
+    })
+
+    telInput.forEach((input) => {
+      input.addEventListener('input', (e) => {
+        e.target.value = e.target.value.replace(/[a-zA-Za-яА-Я]/g, '');
+      })
+    })
+
     form.addEventListener('submit', handleFormSubmit);
   }
 };
